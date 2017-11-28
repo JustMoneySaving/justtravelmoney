@@ -1,0 +1,80 @@
+/* START HOMEPAGE */
+
+.homepage-hero {
+    padding: 70px 0;
+    position: relative;
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    &:after {
+        content: '';
+        background: rgba(0, 0, 0, 0.57);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+/* Section 1 */
+
+.homepage-section.section-1 {
+    background-color: $green;
+    padding: 30px 0;
+    color: $white;
+    iframe {
+        max-width: 100%;
+        height: 218px;
+        border-radius: 3px;
+    }
+    .section-content {
+        text-align: center;
+        font-weight: normal;
+        font-size: 20px;
+        padding-top: 15px;
+        h2 {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 52px;
+            margin: 0 0 20px 0;
+        }
+        p {
+            margin: 0;
+        }
+        .cta {
+            margin-top: 25px;
+            background: url(../images/cta-arrow.png) no-repeat 15% 50%;
+        }
+    }
+}
+
+
+/* Section 2 */
+
+.homepage-section.section-2 {
+    background-color: $orange;
+    padding: 60px 0;
+    color: $white;
+    border-top: 3px solid $white;
+    .section-content {
+        text-align: center;
+        font-weight: normal;
+        font-size: 20px;
+        padding-top: 15px;
+        h2 {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 52px;
+            margin: 0 0 25px 0;
+        }
+        p {
+            margin: 0;
+        }
+        .cta {
+            margin-top: 25px;
+        }
+    }
+}

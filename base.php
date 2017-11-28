@@ -3,6 +3,10 @@
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 
+$container_class = 'container';
+if(is_page_template( 'template-homepage.php' )){
+  $container_class = 'full-width';
+}
 ?>
 
 <!doctype html>
@@ -18,7 +22,7 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <div class="wrap container" role="document">
+    <div class="wrap <?php echo $container_class;?>" role="document">
       <div class="content row">
         <main class="main">
           <?php include Wrapper\template_path(); ?>
