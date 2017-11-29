@@ -4,8 +4,12 @@ use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 
 $container_class = 'container';
+$row_class = 'row';
+$main_class = '';
 if(is_page_template( 'template-homepage.php' )){
   $container_class = 'full-width';
+  $row_class = 'fluid-row';
+  $main_class = 'np';
 }
 ?>
 
@@ -23,8 +27,8 @@ if(is_page_template( 'template-homepage.php' )){
       get_template_part('templates/header');
     ?>
     <div class="wrap <?php echo $container_class;?>" role="document">
-      <div class="content row">
-        <main class="main">
+      <div class="content <?php echo $row_class;?>">
+        <main class="main <?php echo $main_class;?>">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>

@@ -127,8 +127,12 @@ body {
     font-family: 'Nunito', Arial, sans-serif;
     font-weight: 700;
     font-size: 16px;
-    color: #363535;
-    background-color: #F2F2F2;
+    color: $body-color;
+    background-color: $body-bg;
+}
+
+#tinymce {
+    background-color: $white;
 }
 
 img {
@@ -138,8 +142,29 @@ img {
 
 /* CUSTOMIZE GRID */
 
+.main.np {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1010px;
     }
+}
+
+::-webkit-input-placeholder {
+    color: $placeholder;
+}
+
+ ::-moz-placeholder {
+    color: $placeholder;
+}
+
+ :-ms-input-placeholder {
+    color: $placeholder;
+}
+
+ :-moz-placeholder {
+    color: $placeholder;
 }
