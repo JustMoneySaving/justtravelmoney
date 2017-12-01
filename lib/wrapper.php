@@ -17,6 +17,14 @@ function sidebar_path() {
   return new SageWrapping('templates/sidebar.php');
 }
 
+function hero_path() {
+  return new SageWrapping('templates/hero.php');
+}
+
+function breadcrumb_path() {
+  return new SageWrapping('templates/breadcrumbs.php');
+}
+
 class SageWrapping {
   // Stores the full path to the main template file
   public static $main_template;

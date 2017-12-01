@@ -129,6 +129,9 @@ body {
     font-size: 16px;
     color: $body-color;
     background-color: $body-bg;
+    &.single-post {
+        background-color: $white;
+    }
 }
 
 #tinymce {

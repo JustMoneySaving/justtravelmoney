@@ -29,7 +29,19 @@ input[type=submit] {
     background-color: $red;
     border-color: $red-border !important;
     &:hover {
+        color: $white;
         background-color: $green;
         border-color: $green-border !important;
+    }
+}
+
+.btn-secundary {
+    color: $white;
+    background-color: $green;
+    border-color: $green-border !important;
+    &:hover {
+        color: $white;
+        background-color: $red;
+        border-color: $red-border !important;
     }
 }

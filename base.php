@@ -11,6 +11,15 @@ if(is_page_template( 'template-homepage.php' )){
   $row_class = 'fluid-row';
   $main_class = 'np';
 }
+
+if(is_home() || is_category() || is_tag() || is_archive() || is_search()){
+  $main_class = 'loop';
+  $row_class = 'row loop-archive';
+}
+
+if(is_singular('post')){
+  $row_class = 'row single-blog';
+}
 ?>
 
 <!doctype html>
@@ -26,7 +35,17 @@ if(is_page_template( 'template-homepage.php' )){
       do_action('get_header');
       get_template_part('templates/header');
     ?>
+
+    <?php if (Setup\display_hero()) : ?>
+    <?php include Wrapper\hero_path(); ?>
+    <?php endif; ?>
+
+
     <div class="wrap <?php echo $container_class;?>" role="document">
+      <?php if (Setup\display_breadcrumb()) : ?>
+        <?php include Wrapper\breadcrumb_path(); ?>
+      <?php endif; ?>
+
       <div class="content <?php echo $row_class;?>">
         <main class="main <?php echo $main_class;?>">
           <?php include Wrapper\template_path(); ?>

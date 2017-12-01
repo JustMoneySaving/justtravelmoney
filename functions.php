@@ -18,6 +18,7 @@ $sage_includes = [
   'lib/customizer.php', // Theme customizer
   'lib/misc.php', // Misc Functions
   'lib/homepage-meta.php', // Homepage Metabox
+  'lib/general-meta.php', // Homepage Metabox
   'lib/shortcodes.php' // Custom Shortcodes
 ];
 

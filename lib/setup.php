@@ -66,6 +66,24 @@ function widgets_init() {
   ]);
 
   register_sidebar([
+    'name'          => __('Advice and Tips', 'sage'),
+    'id'            => 'sidebar-blog',
+    'before_widget' => '<section class="widget blog-archive %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
+    'name'          => __('Advice and Tips - Single', 'sage'),
+    'id'            => 'sidebar-blog-single',
+    'before_widget' => '<section class="widget blog-single %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
     'name'          => __('Footer', 'sage'),
     'id'            => 'sidebar-footer',
     'before_widget' => '<section class="widget footer-info %1$s %2$s">',
@@ -91,6 +109,39 @@ function display_sidebar() {
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
+}
+
+/**
+ * Determine which pages should NOT display the hero section
+ */
+function display_hero() {
+  static $display;
+
+  isset($display) || $display = !in_array(true, [
+    // The sidebar will NOT be displayed if ANY of the following return true.
+    // @link https://codex.wordpress.org/Conditional_Tags
+    is_404(),
+    is_front_page(),
+    is_page_template('template-custom.php'),
+  ]);
+
+  return apply_filters('sage/display_hero', $display);
+}
+
+/**
+ * Determine which pages should NOT display the breadcrumb section
+ */
+function display_breadcrumb() {
+  static $display;
+
+  isset($display) || $display = in_array(true, [
+    // The sidebar will NOT be displayed if ANY of the following return true.
+    // @link https://codex.wordpress.org/Conditional_Tags
+    is_home(),
+    is_singular('post'),
+  ]);
+
+  return apply_filters('sage/display_breadcrumb', $display);
 }
 
 /**
