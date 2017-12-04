@@ -1,0 +1,120 @@
+<?php
+/**
+ * CUSTOM POST TYPES
+ */
+
+ //FAQ
+add_action( 'init', 'wdc_faq_init' );
+function wdc_faq_init() {
+
+   $labels = array( 
+       'name' => 'FAQs',
+       'singular_name' => 'FAQ',
+       'add_new' => 'Add New',
+       'add_new_item' => 'Add New FAQ',
+       'edit_item' => 'Edit FAQ Item',
+       'new_item' => 'New FAQ Item',
+       'view_item' => 'View FAQ Item',
+       'search_items' => 'Search FAQs',
+       'not_found' => 'No FAQs found',
+       'not_found_in_trash' => 'No FAQs found in Trash',
+       'parent_item_colon' => 'Parent FAQ:',
+       'menu_name' => 'FAQs',
+   );
+
+   $args = array( 
+       'labels' => $labels,
+       'hierarchical' => false,
+       'menu_icon' => 'dashicons-heart',
+       'public' => true,
+       'show_ui' => true,
+       'show_in_menu' => true,
+       'show_in_nav_menus' => true,
+       'publicly_queryable' => true,
+       'exclude_from_search' => true,
+       'has_archive' => false,
+       'query_var' => true,
+       'can_export' => true,
+       'supports' => array('title', 'editor'),
+       'rewrite' =>  array( 
+			'slug' => 'faqs', 
+			'with_front' => false,
+			),
+       'capability_type' => 'post'
+   );
+
+   register_post_type( 'faqs', $args );
+}
+
+// FAQ TAXONOMY
+function add_custom_taxonomies_faq() {
+
+register_taxonomy('faq_category', 'faqs', array( 
+	
+	//'hierarchical' => true,
+	'labels' => array( 
+		'name' => 'FAQ Categories',
+		'singular_name' => 'FAQ Category', 
+		'search_items' => 'Search Categories', 
+		'all_items' =>  'All Category', 
+		'parent_item' => 'Parent Category', 
+		'parent_item_colon' => 'Parent Category:', 
+		'edit_item' => 'Edit Category', 
+		'update_item' => 'Update Category', 
+		'add_new_item' => 'Add New Category', 
+		'new_item_name' =>  'New Type Category', 
+		'menu_name' =>  'FAQ Categories'
+	), 
+	'hierarchical' => true,
+	'rewrite' => array( 
+		'slug' => 'faq-category',  
+		'with_front' => false,
+	) 
+));
+}
+add_action( 'init', 'add_custom_taxonomies_faq', 0 );
+
+
+//PROVIDERS
+
+add_action( 'init', 'wdc_provider_init' );
+function wdc_provider_init() {
+
+   $labels = array( 
+       'name' => 'Travel Money Providers',
+       'singular_name' => 'Travel Money Provider',
+       'add_new' => 'Add New',
+       'add_new_item' => 'Add New Provider',
+       'edit_item' => 'Edit Provider',
+       'new_item' => 'New Provider',
+       'view_item' => 'View Providers',
+       'search_items' => 'Search Providers',
+       'not_found' => 'No Providers found',
+       'not_found_in_trash' => 'No Providers found in Trash',
+       'parent_item_colon' => 'Parent Provider:',
+       'menu_name' => 'Providers',
+   );
+
+   $args = array( 
+       'labels' => $labels,
+       'hierarchical' => false,
+       'menu_icon' => 'dashicons-heart',
+       'public' => true,
+       'show_ui' => true,
+       'show_in_menu' => true,
+       'show_in_nav_menus' => true,
+       'publicly_queryable' => true,
+       'exclude_from_search' => true,
+       'has_archive' => true,
+       'query_var' => true,
+       'can_export' => true,
+       'supports' => array('title', 'editor', 'thumbnail'),
+       'rewrite' =>  array( 
+			'slug' => 'travel-money-providers', 
+			'with_front' => true,
+			),
+       'capability_type' => 'post'
+   );
+
+   register_post_type( 'providers', $args );
+}

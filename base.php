@@ -12,13 +12,17 @@ if(is_page_template( 'template-homepage.php' )){
   $main_class = 'np';
 }
 
-if(is_home() || is_category() || is_tag() || is_archive() || is_search()){
+if(is_home() || is_category() || is_tag() || is_archive() || is_archive() || is_search()){
   $main_class = 'loop';
   $row_class = 'row loop-archive';
 }
 
 if(is_singular('post')){
   $row_class = 'row single-blog';
+}
+
+if(is_singular('providers')){
+  $row_class = 'row single-provider';
 }
 ?>
 
@@ -37,17 +41,33 @@ if(is_singular('post')){
     ?>
 
     <?php if (Setup\display_hero()) : ?>
-    <?php include Wrapper\hero_path(); ?>
+      <?php include Wrapper\hero_path(); ?>
     <?php endif; ?>
-
 
     <div class="wrap <?php echo $container_class;?>" role="document">
       <?php if (Setup\display_breadcrumb()) : ?>
         <?php include Wrapper\breadcrumb_path(); ?>
       <?php endif; ?>
 
+      
       <div class="content <?php echo $row_class;?>">
+      
+        <?php if (Setup\display_archive_title()) : ?>
+          <?php include Wrapper\archive_header_path(); ?>
+        <?php endif; ?>
+
+        <?php if (Setup\display_comparison_title()) : ?>
+          <?php include Wrapper\comparison_title_path(); ?>
+        <?php endif; ?>
+
+        
+
         <main class="main <?php echo $main_class;?>">
+
+        <?php if (Setup\display_comparison_title()) : ?>
+          <?php include Wrapper\comparison_widget_path(); ?>
+        <?php endif; ?>
+
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>

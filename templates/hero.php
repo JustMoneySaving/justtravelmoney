@@ -3,8 +3,9 @@ $pid = get_the_id();
 $hero_title = '';
 $hero_content = '';
 $hero_image_src = 'http://placehold.it/1920x870/';
+$added_class = '';
 
-if(is_home() || is_archive() || is_category() || is_tag() || is_search() ){
+if(is_home() || is_archive()){
     $pid = get_option( 'page_for_posts' );
 }
 
@@ -27,12 +28,47 @@ if(is_singular( 'post' )){
         }
     }
 }
+
+if(is_post_type_archive('providers')){
+    $hero_title = 'All Travel Money Providers';
+    $hero_content = 'We’ve compared the rates of British Pounds (GBP) to Dollars (USD) <br>
+    At the best rate, 500 Pounds buys you 212 USD from Travelex';
+}
+
+if(is_singular('providers')){
+    $hero_title = get_the_title();
+    $hero_image = wp_get_attachment_image_src( get_post_thumbnail_id($pid), 'full' );
+    $hero_title_meta = rwmb_meta( 'WDC_provider_hero_title', array(), $pid );
+
+    if($hero_title_meta){
+        $hero_title = $hero_title_meta;
+    }
+    $hero_content = rwmb_meta( 'WDC_provider_hero_content', array(), $pid );
+    $provider_logo = rwmb_meta( 'WDC_provider_logo', array(), $pid );
+    $logo_src = 'http://placehold.it/120x40/';
+    $added_class = 'provider-hero';
+
+    if(!empty($provider_logo)):
+        foreach($provider_logo as $logo){
+            $logo_src = $logo['full_url'];
+        }
+    endif;
+}
 ?>
 
 <section class="hero-section page-hero has-overlay" style="background-image: url(<?php echo $hero_image_src;?>);">
     <div class="vertical">
         <div class="container">
-            <div class="hero-content">
+
+            <?php if(is_singular('providers')){ ?>
+                <div class="provider-logo">
+                    <div class="logo-inner">
+                        <img src="<?php echo $logo_src;?>" alt="<?php get_the_title();?>" />
+                    </div>
+                </div>
+            <?php } ?>
+
+            <div class="hero-content <?php echo $added_class;?>">
                 <?php if($hero_title){?>
                 <h1><?php echo $hero_title;?></h1>
                 <?php } ?>

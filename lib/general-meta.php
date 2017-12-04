@@ -53,5 +53,175 @@ $meta_boxes[] = array(
 );
 
 
+// HERO
+$meta_boxes[] = array(
+	'title' => 'Provider Hero',
+	'pages' => array( 'providers' ),
+	'fields' => array(
+
+		array(
+			'name'  => 'Hero title',
+			'id'    => "{$prefix}provider_hero_title",
+			'desc'  => '',
+			'type'  => 'text',
+			'std'   =>  '',
+		),
+	
+	    array(
+			'name'  => 'Hero Content',
+			'id'    => "{$prefix}provider_hero_content",
+			'desc'  => '',
+			'type'  => 'wysiwyg',
+			'options' => array(
+				'media_buttons' => false,
+				'textarea_rows' => 5
+			),
+		),
+	),
+);
+
+// HERO
+$meta_boxes[] = array(
+	'title' => 'Provider Logo',
+	'pages' => array( 'providers' ),
+	'context' => 'side',
+	'fields' => array(
+        array(
+            'name'  => 'Provider Logo',
+            'id'    => "{$prefix}provider_logo",					
+            'desc'  => '',
+            'type'  => 'image_advanced',
+            'max_file_uploads' => 1,
+        ),
+	),
+);
+
+// INTRO
+$meta_boxes[] = array(
+	'title' => 'Provider Intro',
+	'pages' => array( 'providers' ),
+	'fields' => array(
+        array(
+            'name'  => 'Provider Intro Box',
+            'id'    => "{$prefix}provider_intro",					
+            'desc'  => '',
+			'type'  => 'wysiwyg',
+			'options' => array(
+				'media_buttons' => true,
+				'textarea_rows' => 5
+			),
+        ),
+	),
+);
+
+// ARTICLE TITLE
+$meta_boxes[] = array(
+	'title' => 'Article Header Override',
+	'pages' => array( 'providers' ),
+	'fields' => array(
+        array(
+            'name'  => 'Article Header Title',
+            'id'    => "{$prefix}provider_header_title",					
+            'desc'  => '',
+			'type'  => 'text',
+		),
+
+		array(
+            'name'  => 'Article Header Subtitle',
+            'id'    => "{$prefix}provider_header_subtitle",					
+            'desc'  => '',
+			'type'  => 'text',
+		),
+		
+		array(
+            'name'  => 'Header image',
+            'id'    => "{$prefix}provider_header_image",					
+            'desc'  => '200x120',
+            'type'  => 'image_advanced',
+            'max_file_uploads' => 1,
+        ),
+	),
+);
+
+// ARTICLE VIDEO
+$meta_boxes[] = array(
+	'title' => 'Article Video',
+	'pages' => array( 'providers' ),
+	'fields' => array(
+        array(
+            'name'  => 'YouTube Video ID',
+            'id'    => "{$prefix}provider_video_id",					
+            'desc'  => '',
+			'type'  => 'text',
+		),
+	),
+);
+
+// ABOUT PROVIDER
+$meta_boxes[] = array(
+	'title' => 'About Provider',
+	'pages' => array( 'providers' ),
+	'fields' => array(
+	    array(
+			'name'  => 'About Content',
+			'id'    => "{$prefix}about_provider",
+			'desc'  => '',
+			'type'  => 'wysiwyg',
+			'options' => array(
+				'media_buttons' => false,
+				'textarea_rows' => 5
+			),
+		),
+
+		array(
+			'name'  => 'Website URL',
+			'id'    => "{$prefix}about_provider_url",
+			'desc'  => 'must contain http:// or https://',
+			'type'  => 'text',
+		),
+	),
+);
+
+// FACT BOX
+$meta_boxes[] = array(
+	'title' => 'Fact Box',
+	'pages' => array( 'providers' ),
+	'fields' => array(
+	    array(
+			'name'  => 'Fact Box Content',
+			'id'    => "{$prefix}provider_fact_box",
+			'desc'  => '',
+			'type'  => 'wysiwyg',
+			'options' => array(
+				'media_buttons' => false,
+				'textarea_rows' => 5
+			),
+		),
+	),
+);
+
+
+// FAQ Category
+$meta_boxes[] = array(
+	'title' => 'FAQ Category',
+	'pages' => array( 'providers' ),
+	'fields' => array(
+		array(
+			'name' => __( 'Select FAQ Category', 'wdc' ),
+			'id'   => "{$prefix}faq_cat",
+			'type' => 'taxonomy_advanced',
+			'taxonomy' => 'faq_category',
+			'field_type' => 'select',
+			'query_args' => array(
+				'hide_empty' => false,
+			),
+			'desc' => 'Please select an industry category related to this page', 
+			'std' => ''
+		),
+	),
+);
+
+
+
 return $meta_boxes;
 }?>

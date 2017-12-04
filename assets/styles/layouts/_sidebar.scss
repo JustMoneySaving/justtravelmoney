@@ -1,19 +1,125 @@
 .sidebar {
     .widget {
         background: $white;
-        padding: 25px;
+        padding: 25px 20px 20px 20px;
         border: 1px solid $light-grey;
+        border-bottom: 3px solid $light-grey;
         border-radius: 5px;
         margin-bottom: 20px;
         &:last-of-type {
             margin-bottom: 0;
         }
+        .btn {
+            height: 44px;
+            line-height: 24px;
+            font-size: 14px;
+        }
+        .btn-holder {
+            text-align: center;
+        }
         h3 {
             font-size: 22px;
             font-weight: 700;
             line-height: 30px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             text-align: center;
+        }
+        &.widget_wdc_browse_all_widget {
+            text-align: center;
+        }
+        &.widget_wdc_recent_posts_widget {
+            h3 {
+                margin-bottom: 25px;
+            }
+            .recent-posts-widget {
+                list-style: none;
+                margin: 0 0 30px 0;
+                padding: 0;
+                font-size: 14px;
+                font-weight: 700px;
+                line-height: 20px;
+                li {
+                    margin-bottom: 8px;
+                    a {
+                        color: $link-blue;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &.widget_wdc_compare_rates_widget {
+            border-top: 5px solid $red;
+            header {
+                margin-bottom: 34px;
+                text-align: center;
+                h3 {
+                    border-bottom: 3px solid $light-grey;
+                    margin-bottom: 0;
+                    padding-bottom: 15px;
+                    display: inline-block;
+                    width: 70%;
+                }
+            }
+            .conversion-box {
+                .box-inner {
+                    padding: 0;
+                    .form-group {
+                        // margin-bottom: 10px;
+                        label {
+                            font-size: 14px;
+                            font-weight: 700;
+                            margin-bottom: 5px;
+                            line-height: 20px;
+                        }
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .btn {
+                display: block;
+                width: 100%;
+                height: 50px;
+            }
+        }
+        &.about-provider {
+            font-size: 14px;
+            p {
+                font-weight: 500;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            .btn-holder {
+                margin-top: 25px;
+                .btn {
+                    height: 44px;
+                }
+            }
+        }
+        &.provider-facts {
+            font-size: 14px;
+            font-weight: 700;
+            p {
+                margin: 0;
+            }
+            ul {
+                font-weight: 500;
+                margin-bottom: 15px;
+                padding: 0;
+                list-style-position: inside;
+                list-style-type: none;
+                li {
+                    &:before {
+                        content: "• ";
+                        color: $green;
+                        /* or whatever color you prefer */
+                    }
+                }
+            }
         }
     }
 }

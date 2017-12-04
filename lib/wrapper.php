@@ -25,6 +25,19 @@ function breadcrumb_path() {
   return new SageWrapping('templates/breadcrumbs.php');
 }
 
+function archive_header_path() {
+  return new SageWrapping('templates/archive-header.php');
+}
+
+function comparison_title_path() {
+  return new SageWrapping('templates/provider-widget-title.php');
+}
+
+function comparison_widget_path() {
+  return new SageWrapping('templates/provider-widget.php');
+}
+
+
 class SageWrapping {
   // Stores the full path to the main template file
   public static $main_template;

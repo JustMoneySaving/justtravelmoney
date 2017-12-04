@@ -19,7 +19,9 @@ $sage_includes = [
   'lib/misc.php', // Misc Functions
   'lib/homepage-meta.php', // Homepage Metabox
   'lib/general-meta.php', // Homepage Metabox
-  'lib/shortcodes.php' // Custom Shortcodes
+  'lib/shortcodes.php', // Custom Shortcodes
+  'lib/cpt.php', // Custom Post Types
+  'lib/widgets.php', // Custom Widgets
 ];
 
 foreach ($sage_includes as $file) {

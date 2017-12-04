@@ -84,6 +84,15 @@ function widgets_init() {
   ]);
 
   register_sidebar([
+    'name'          => __('Merchant Page', 'sage'),
+    'id'            => 'sidebar-providers',
+    'before_widget' => '<section class="widget merchant-widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
     'name'          => __('Footer', 'sage'),
     'id'            => 'sidebar-footer',
     'before_widget' => '<section class="widget footer-info %1$s %2$s">',
@@ -139,9 +148,49 @@ function display_breadcrumb() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_home(),
     is_singular('post'),
+    is_category(),
+    is_tag(),
+    is_archive(),
+    is_search(),
+    is_singular('providers')
   ]);
 
   return apply_filters('sage/display_breadcrumb', $display);
+}
+
+/**
+ * Determine which pages should display the archive title section
+ */
+function display_archive_title() {
+  static $display;
+
+  isset($display) || $display = in_array(true, [
+    // The sidebar will NOT be displayed if ANY of the following return true.
+    // @link https://codex.wordpress.org/Conditional_Tags
+    is_home(),
+    is_category(),
+    is_tag(),
+    is_archive(),
+    is_search(),
+  ]);
+
+  return apply_filters('sage/display_archive_title', $display);
+}
+
+
+/**
+ * Determine which pages should display the light comparison title
+ */
+function display_comparison_title() {
+  static $display;
+
+  isset($display) || $display = in_array(true, [
+    // The sidebar will NOT be displayed if ANY of the following return true.
+    // @link https://codex.wordpress.org/Conditional_Tags
+    is_singular('providers'),
+  ]);
+
+  return apply_filters('sage/display_comparison_title', $display);
 }
 
 /**
