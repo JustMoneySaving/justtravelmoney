@@ -29,7 +29,8 @@ function setup() {
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage'),
     'footer_navigation' => __('Footer Navigation', 'sage'),
-    'offer_nav' => __('Offer Navigation', 'sage')
+    'offer_nav' => __('Offer Navigation', 'sage'),
+    'mobile_navigation' => __('Mobile Navigation', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -220,6 +221,40 @@ function assets() {
 
   wp_enqueue_script('modernizr', Assets\asset_path('scripts/modernizr.js'), null, null, true);
 
+  wp_enqueue_script('slidebars', Assets\asset_path('scripts/slidebars.js'), null, null, true);
+  
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+/**
+ * Remove emoji script
+ */
+function wdc_disable_wp_emojicons() {
+  // all actions related to emojis
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+}
+add_action( 'init', __NAMESPACE__ . '\\wdc_disable_wp_emojicons' );
+
+/**
+ * Add Last mod header
+ */
+
+ /* Theme Mods */
+
+add_action( 'send_headers',  __NAMESPACE__ . '\\WDC_add_last_modified_header' );
+function WDC_add_last_modified_header() {
+    //Check if we are in a single post of any type (archive pages has not modified date)
+    if( is_singular() || is_page() ) {
+        $post_id = get_the_id();
+        if( $post_id ) {
+            header("Last-Modified: " . get_the_modified_time("D, d M Y H:i:s", $post_id) );
+        }
+    }
+}

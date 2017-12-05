@@ -3,12 +3,14 @@
 // bower:scss
 @import "../../bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
+@import "font-awesome/font-awesome";
 @import "common/global";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/grid";
 @import "components/wp-classes";
+@import "components/slidebars";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

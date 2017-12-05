@@ -25,6 +25,11 @@
             "files": [
                 "scripts/modernizr.js"
             ]
+        },
+        "slidebars.js": {
+            "files": [
+                "scripts/slidebars.js"
+            ]
         }
     },
     "config": {

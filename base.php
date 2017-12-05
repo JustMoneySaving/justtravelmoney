@@ -30,6 +30,7 @@ if(is_singular('providers')){
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
+    <div canvas="container">
     <!--[if IE]>
       <div class="alert alert-warning">
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
@@ -64,8 +65,6 @@ if(is_singular('providers')){
           <?php include Wrapper\comparison_title_path(); ?>
         <?php endif; ?>
 
-        
-
         <main class="main <?php echo $main_class;?>">
 
         <?php if (Setup\display_comparison_title()) : ?>
@@ -81,10 +80,17 @@ if(is_singular('providers')){
         <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
+
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
-      wp_footer();
     ?>
+    </div><!-- /canvas -->
+
+    <?php if (has_nav_menu('mobile_navigation')) : 
+      get_template_part('templates/mobile-nav');
+    endif; ?>
+
+    <?php wp_footer(); ?>
   </body>
 </html>

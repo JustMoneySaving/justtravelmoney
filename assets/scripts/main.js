@@ -22,11 +22,22 @@
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
+                var $ = jQuery.noConflict();
 
                 $('.open-offer-popup').click(function(e) {
                     e.preventDefault();
                     console.log('offer');
                     $('.offer-wrap').toggleClass('open');
+                });
+
+                // Initialize Slidebars
+                var controller = new slidebars();
+                controller.init();
+
+                // Left Slidebar controls
+                $('.js-open-left-slidebar').on('click', function(event) {
+                    event.stopPropagation();
+                    controller.toggle('slidebar-1');
                 });
             }
         },

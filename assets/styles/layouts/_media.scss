@@ -11,6 +11,26 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    header.banner {
+        .nav-primary {
+            .menu-special-offer-container {
+                margin-right: 0;
+                li {
+                    a {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .offer-wrap {
+            width: 100%;
+            right: 0;
+            left: auto;
+        }
+    }
+}
+
 @media only screen and (max-width: 480px) {
     body {
         font-size: 14px;
@@ -28,8 +48,7 @@
                 max-height: 34px;
             }
         }
-        .menu-main-menu-container,
-        .menu-special-offer-container {
+        .menu-main-menu-container {
             display: none;
         }
         .nav-primary {

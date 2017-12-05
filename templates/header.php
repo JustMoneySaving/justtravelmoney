@@ -11,11 +11,18 @@
       endif;
       ?>
 
-      <?php
-      if (has_nav_menu('offer_nav')) :
+      <?php if (has_nav_menu('mobile_navigation')) : ?>
+      <div class="mobile-nav only-mobile">
+        <a href="#" class="js-open-left-slidebar"><i class="fa fa-bars"></i> MENU</a>
+      </div>
+      <?php endif; ?>
+
+      <?php if (has_nav_menu('offer_nav')) :
         wp_nav_menu(['theme_location' => 'offer_nav', 'menu_id' => 'offer-menu', 'menu_class' => 'nav']);
-      endif;
-      ?>
+      endif; ?>
+
+      
+
       <?php get_template_part('templates/special-offer'); ?>
     </nav>
   </div>
