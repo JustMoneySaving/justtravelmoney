@@ -143,6 +143,15 @@ img {
     height: auto;
 }
 
+b,
+strong {
+    font-weight: 700;
+}
+
+.only-mobile {
+    display: none;
+}
+
 
 /* CUSTOMIZE GRID */
 

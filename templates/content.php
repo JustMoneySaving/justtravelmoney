@@ -7,7 +7,7 @@
       <div class="post-image">
         <a href="<?php the_permalink(); ?>">
         <?php if(has_post_thumbnail()){
-          the_post_thumbnail('thumbnail');
+          the_post_thumbnail('medium');
         }else{
           echo '<img src="http://placehold.it/160x125/" alt="placeholder" />';
         }?>

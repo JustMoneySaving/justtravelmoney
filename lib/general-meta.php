@@ -222,6 +222,86 @@ $meta_boxes[] = array(
 );
 
 
+// OFFERS
+
+// ABOUT PROVIDER
+$meta_boxes[] = array(
+	'title' => 'Offer Details',
+	'pages' => array( 'special-offers' ),
+	'fields' => array(
+
+		array(
+			'name'  => 'Offer Active',
+			'id'    => "{$prefix}offer_active",
+			'desc'  => '',
+			'type'  => 'checkbox',
+			'std' => '1'
+		),
+
+		array(
+			'name' => __( 'Offer provider', 'wdc' ),
+			'id'   => "{$prefix}offer_provider",
+			'type' => 'post',
+			'post_type' => 'providers',
+			'field_type' => 'select_advanced',
+			'placeholder' => 'Select a provider',
+			'query_args'  => array(
+				'post_status'    => 'publish',
+				'posts_per_page' => - 1,
+			),
+			'desc' => 'Please select a parent provider', 
+			'std' => ''
+		),
+
+		array(
+			'name'  => 'Offer Desc',
+			'id'    => "{$prefix}offer_desc",
+			'desc'  => '',
+			'type'  => 'text',
+			'clone' => true
+		),
+
+	    array(
+			'name'  => 'Offer Copy',
+			'id'    => "{$prefix}offer_copy",
+			'desc'  => 'use Heading 3 for title',
+			'type'  => 'wysiwyg',
+			'options' => array(
+				'media_buttons' => false,
+				'textarea_rows' => 5
+			),
+		),
+
+		array(
+			'name'  => 'Offer URL',
+			'id'    => "{$prefix}offer_url",
+			'desc'  => 'must contain http:// or https:// | Leave blank to lead to provider page',
+			'type'  => 'text',
+		),
+	),
+);
+
+// ABOUT PROVIDER
+$meta_boxes[] = array(
+	'title' => 'Offer Content for Travel Money Providers',
+	'pages' => array( 'special-offers' ),
+	'fields' => array(
+	    array(
+			'name'  => 'Highlight Copy',
+			'id'    => "{$prefix}highlight_copy",
+			'desc'  => '',
+			'type'  => 'wysiwyg',
+			'options' => array(
+				'media_buttons' => false,
+				'textarea_rows' => 5
+			),
+		),
+	),
+);
+
+
+
+
 
 return $meta_boxes;
 }?>

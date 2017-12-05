@@ -118,3 +118,48 @@ function wdc_provider_init() {
 
    register_post_type( 'providers', $args );
 }
+
+
+//SPECIAL OFFERS
+
+add_action( 'init', 'wdc_special_offer_init' );
+function wdc_special_offer_init() {
+
+   $labels = array( 
+       'name' => 'Special Offers',
+       'singular_name' => 'Special Offer',
+       'add_new' => 'Add New',
+       'add_new_item' => 'Add New Offer',
+       'edit_item' => 'Edit Offer',
+       'new_item' => 'New Offer',
+       'view_item' => 'View Offers',
+       'search_items' => 'Search Offers',
+       'not_found' => 'No Offers found',
+       'not_found_in_trash' => 'No Offers found in Trash',
+       'parent_item_colon' => 'Parent Offer:',
+       'menu_name' => 'Special Offers',
+   );
+
+   $args = array( 
+       'labels' => $labels,
+       'hierarchical' => false,
+       'menu_icon' => 'dashicons-heart',
+       'public' => true,
+       'show_ui' => true,
+       'show_in_menu' => true,
+       'show_in_nav_menus' => true,
+       'publicly_queryable' => true,
+       'exclude_from_search' => true,
+       'has_archive' => false,
+       'query_var' => true,
+       'can_export' => true,
+       'supports' => array('title'),
+       'rewrite' =>  array( 
+			'slug' => 'special-offers', 
+			'with_front' => false,
+			),
+       'capability_type' => 'post'
+   );
+
+   register_post_type( 'special-offers', $args );
+}

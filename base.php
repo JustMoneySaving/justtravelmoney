@@ -51,6 +51,10 @@ if(is_singular('providers')){
 
       
       <div class="content <?php echo $row_class;?>">
+
+        <?php if (Setup\display_sponsored_offer()) : ?>
+          <?php include Wrapper\spoonsored_provider_path(); ?>
+        <?php endif; ?>
       
         <?php if (Setup\display_archive_title()) : ?>
           <?php include Wrapper\archive_header_path(); ?>

@@ -1,0 +1,661 @@
+@media only screen and (max-width: 1024px) {
+    .no-mobile {
+        display: none;
+    }
+    .only-mobile {
+        display: block;
+    }
+    html,
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    header.banner {
+        padding: 20px 0 0 0;
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .brand {
+            display: block;
+            text-align: center;
+            img {
+                max-height: 34px;
+            }
+        }
+        .menu-main-menu-container,
+        .menu-special-offer-container {
+            display: none;
+        }
+        .nav-primary {
+            margin-top: 20px;
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+    }
+    .hero-section {
+        .hero-content {
+            h1 {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            p {
+                font-size: 16px;
+                br {
+                    display: none;
+                }
+            }
+            &.provider-hero {
+                float: none;
+                text-align: center;
+                margin: 0;
+            }
+        }
+        .provider-logo {
+            width: 90px;
+            height: 90px;
+            float: none;
+            margin: 0 auto 20px auto;
+        }
+        &.page-hero {
+            padding: 30px 0;
+            max-height: 200px;
+        }
+        &.homepage-hero {
+            padding: 30px 0 50px 0;
+            height: 230px;
+            margin-bottom: 50px;
+            .hero-content {
+                margin-top: 0;
+                position: relative;
+                h1 {
+                    font-size: 20px;
+                    line-height: 26px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: normal;
+                }
+            }
+            .hero-logos {
+                white-space: nowrap;
+                text-align: center;
+                margin: 0;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: -25px;
+                z-index: 1;
+                img {
+                    height: 50px;
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+    .breadcrumbs {
+        padding: 12px 0;
+        font-size: 12px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        .sep {
+            margin: 0 5px;
+        }
+    }
+    .content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        &.loop-archive {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            .page-header {
+                text-align: center;
+                h1 {
+                    font-size: 18px;
+                }
+            }
+            article {
+                margin-bottom: 15px;
+                text-align: center;
+                header {
+                    h2 {
+                        font-size: 16px;
+                        line-height: normal;
+                        a {
+                            display: block;
+                        }
+                    }
+                }
+                .npr {
+                    padding-right: 15px;
+                }
+                .post-image {
+                    margin-bottom: 15px;
+                    a {
+                        display: block;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+                .read-more {
+                    text-align: center;
+                }
+                &.providers {
+                    padding: 5px 5px 10px;
+                    .post-image {
+                        left: 5px;
+                        padding: 5px 10px;
+                    }
+                    header {
+                        padding-left: 75px;
+                        h2 {
+                            font-size: 16px;
+                        }
+                    }
+                    .read-more {
+                        padding-left: 75px;
+                        margin-top: 5px;
+                        .btn {
+                            height: 36px;
+                            padding: 0 40px;
+                            line-height: 36px;
+                        }
+                    }
+                }
+            }
+            .sponsored-provider {
+                header {
+                    h6 {
+                        font-size: 16px;
+                    }
+                }
+                .special-offer {
+                    height: 90px;
+                    .offer-provider {
+                        .provider-image {
+                            left: 5px;
+                            padding: 5px 10px;
+                            width: 72px;
+                            height: 68px;
+                        }
+                        .provider-info {
+                            padding-left: 85px;
+                        }
+                        .deal-info {
+                            flex-basis: 70%;
+                            h2 {
+                                font-size: 16px;
+                                line-height: normal;
+                            }
+                        }
+                        .deal-benefit {
+                            flex-basis: 30%;
+                            font-size: 12px;
+                            strong {
+                                font-size: 14px;
+                            }
+                        }
+                        .btn-holder {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &.single-blog {
+            padding-top: 0;
+            padding-bottom: 40px;
+            article {
+                padding: 15px;
+                header {
+                    margin-bottom: 20px;
+                    h1 {
+                        font-size: 18px;
+                        line-height: normal;
+                        padding-bottom: 15px;
+                    }
+                }
+                .entry-image {
+                    float: none;
+                    width: 100%;
+                    margin: 0 0 15px 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .main {
+                margin-bottom: 40px;
+            }
+        }
+        &.single-provider {
+            padding-top: 18px;
+            padding-bottom: 60px;
+            .main {
+                margin-bottom: 25px;
+            }
+            .provider-widget-title {
+                margin-bottom: 20px;
+                h2 {
+                    font-size: 20px;
+                    text-align: center;
+                    line-height: normal;
+                }
+            }
+            .comparison {
+                padding: 18px 25px;
+                form {
+                    display: block;
+                    .form-group {
+                        margin-bottom: 15px;
+                        margin-right: 0;
+                        padding-right: 0;
+                        label {
+                            text-align: center;
+                        }
+                        &.submit-form {
+                            margin-bottom: 0;
+                            text-align: center;
+                            padding-top: 0;
+                        }
+                        .btn {
+                            padding: 0 40px;
+                            line-height: 44px;
+                        }
+                    }
+                    &:after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                }
+            }
+            .provider-intro {
+                margin-bottom: 25px;
+            }
+            article.providers {
+                header {
+                    margin-bottom: 15px;
+                    .header-inner {
+                        float: none;
+                        width: 100%;
+                        h2 {
+                            font-size: 16px;
+                            line-height: normal;
+                        }
+                        p {
+                            font-size: 14px;
+                            line-height: normal;
+                        }
+                    }
+                    img {
+                        display: none;
+                    }
+                }
+                .money-guide-box {
+                    span.box-number {
+                        font-size: 16px;
+                    }
+                    &.has-icon {
+                        padding-right: 14px;
+                        background-size: 60px;
+                        background-position: 50% 10%;
+                        padding-top: 35%;
+                    }
+                    h6 {
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                }
+                .article-video {
+                    margin-top: 30px;
+                    iframe {
+                        max-width: 100%;
+                        height: 190px;
+                    }
+                }
+            }
+            .provider-faqs {
+                header {
+                    margin-bottom: 20px;
+                    h2 {
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                article {
+                    margin-bottom: 15px;
+                    h4 {
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .homepage-section {
+        iframe {
+            height: 190px;
+        }
+        .section-image {
+            margin-top: 25px;
+        }
+        .section-content {
+            font-size: 16px;
+            h2 {
+                font-size: 28px;
+                line-height: 34px;
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 15px;
+                br {
+                    display: none;
+                }
+            }
+            .arrow-cta {
+                margin-top: 15px;
+                &.has-arrow {
+                    background: none;
+                }
+            }
+        }
+        &.section-1 {
+            padding: 30px 0;
+        }
+        &.section-2 {
+            padding: 30px 0;
+        }
+        &.section-3 {
+            padding: 30px 0;
+            header {
+                margin-bottom: 40px;
+                h2 {
+                    font-size: 26px;
+                    line-height: 30px;
+                }
+            }
+            .col-sm-4 {
+                margin-bottom: 40px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            .box {
+                .box-inner {
+                    padding: 45px 25px 20px;
+                    h3 {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        &.section-4 {
+            padding: 0 0 40px 0;
+            .fearures-grid {
+                margin-bottom: 40px;
+                .col-sm-6 {
+                    width: 50%;
+                }
+                .box {
+                    .box-title {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .blog-list {
+                padding: 20px 16px;
+                header {
+                    margin-bottom: 20px;
+                    h3 {
+                        font-size: 18px;
+                        padding-right: 25px;
+                    }
+                    a {
+                        font-size: 12px;
+                    }
+                }
+                .recent-posts {
+                    li {
+                        margin-bottom: 15px;
+                        h6 {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        &.result-section {
+            padding-bottom: 30px;
+            .exchange-results {
+                margin-top: 0;
+                padding-top: 15px;
+                h2 {
+                    font-size: 18px;
+                    text-align: center;
+                    line-height: normal;
+                }
+                .main-header {
+                    margin-bottom: 30px;
+                    .header-square {
+                        width: 90px;
+                        height: 90px;
+                        margin-right: 10px;
+                        .square-inner {
+                            padding: 6px;
+                            font-size: 12px;
+                            span {
+                                &.number {
+                                    font-size: 30px;
+                                    line-height: 40px;
+                                }
+                                &.completeness {
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .header-content {
+                        padding: 0;
+                        width: 70%;
+                        h2 {
+                            color: $body-color;
+                            font-size: 18px;
+                            line-height: 26px;
+                            margin: 0;
+                            text-align: left;
+                        }
+                        p {
+                            font-size: 10px;
+                            line-height: 14px;
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .sponsored-provider {
+                    margin-bottom: 15px;
+                    header {
+                        h6 {
+                            font-size: 16px;
+                            line-height: normal;
+                        }
+                    }
+                    .special-offer {
+                        height: 80px;
+                        .provider-image {
+                            left: 10px;
+                            padding: 5px 5px;
+                            width: 40px;
+                            height: 36px;
+                        }
+                        .provider-info {
+                            padding-left: 60px;
+                            .deal-info {
+                                flex-basis: 40%;
+                                h2 {
+                                    font-size: 12px;
+                                    line-height: normal;
+                                    text-align: left;
+                                }
+                                ul {
+                                    li {
+                                        font-size: 10px;
+                                        line-height: normal;
+                                    }
+                                }
+                            }
+                            .deal-content {
+                                flex-basis: 60%;
+                                h3 {
+                                    font-size: 12px;
+                                    line-height: normal;
+                                    margin-bottom: 0;
+                                    br {
+                                        display: none;
+                                    }
+                                }
+                                p {
+                                    display: none;
+                                }
+                            }
+                            .btn-holder {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .result-box {
+                padding: 0;
+                height: 90px;
+                .provider-image {
+                    left: 10px;
+                    padding: 5px;
+                    width: 40px;
+                    height: 36px;
+                }
+                .result-content {
+                    padding-left: 0px;
+                    .title {
+                        padding-top: 45px;
+                        flex-basis: 20%;
+                        h3 {
+                            font-size: 11px;
+                            margin: 0;
+                            line-height: normal;
+                            text-align: center;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
+                    }
+                    .result-info {
+                        flex-basis: 55%;
+                        line-height: normal;
+                        font-size: 10px;
+                        span {
+                            font-size: 12px;
+                            line-height: normal;
+                        }
+                        .amount {
+                            font-size: 10px;
+                            span {
+                                font-size: 12px;
+                                line-height: normal;
+                            }
+                        }
+                    }
+                    .btn-holder {
+                        flex-basis: 25%;
+                        .btn {
+                            height: 26px;
+                            padding: 0 14px;
+                            line-height: 26px;
+                            font-size: 8px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                &.best {
+                    height: 90px;
+                    .provider-image {
+                        left: 10px;
+                        padding: 5px;
+                        width: 40px;
+                        height: 36px;
+                    }
+                    .result-content {
+                        padding-left: 0px;
+                        .title {
+                            padding-top: 45px;
+                            flex-basis: 20%;
+                            padding-left: 0;
+                            p {
+                                display: none;
+                            }
+                        }
+                        .result-info {
+                            flex-basis: 55%;
+                            line-height: normal;
+                            font-size: 9px;
+                            span {
+                                font-size: 12px;
+                                line-height: normal;
+                            }
+                            .amount {
+                                font-size: 10px;
+                                span {
+                                    font-size: 12px;
+                                    line-height: normal;
+                                }
+                            }
+                        }
+                        .btn-holder {
+                            flex-basis: 25%;
+                            .btn {
+                                height: 26px;
+                                padding: 0 7px;
+                                line-height: 26px;
+                                font-size: 8px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer.content-info {
+        padding: 40px 0;
+        .nav-secondary {
+            margin-bottom: 25px;
+            .footer-nav {
+                display: block;
+                li {
+                    float: none;
+                    margin-right: 0;
+                }
+            }
+        }
+        .footer-info {
+            p {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

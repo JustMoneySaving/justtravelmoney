@@ -28,8 +28,8 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage'),
-    'footer_navigation' => __('Footer Navigation', 'sage')
-
+    'footer_navigation' => __('Footer Navigation', 'sage'),
+    'offer_nav' => __('Offer Navigation', 'sage')
   ]);
 
   // Enable post thumbnails
@@ -175,6 +175,21 @@ function display_archive_title() {
   ]);
 
   return apply_filters('sage/display_archive_title', $display);
+}
+
+/**
+ * Determine which pages should display the sponsored offer
+ */
+function display_sponsored_offer() {
+  static $display;
+
+  isset($display) || $display = in_array(true, [
+    // The sidebar will NOT be displayed if ANY of the following return true.
+    // @link https://codex.wordpress.org/Conditional_Tags
+    is_post_type_archive( 'providers' ),
+  ]);
+
+  return apply_filters('sage/display_sponsored_offer', $display);
 }
 
 

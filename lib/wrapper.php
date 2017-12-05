@@ -37,6 +37,10 @@ function comparison_widget_path() {
   return new SageWrapping('templates/provider-widget.php');
 }
 
+function spoonsored_provider_path() {
+  return new SageWrapping('templates/sponsored-provider.php');
+}
+
 
 class SageWrapping {
   // Stores the full path to the main template file
