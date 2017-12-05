@@ -143,12 +143,17 @@ img {
     height: auto;
 }
 
+iframe {
+    max-width: 100%;
+}
+
 b,
 strong {
     font-weight: 700;
 }
 
-.only-mobile {
+.only-mobile,
+.only-mobile-small {
     display: none;
 }
 

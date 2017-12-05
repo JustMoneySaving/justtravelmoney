@@ -13,6 +13,9 @@
 
 @media only screen and (max-width: 768px) {
     header.banner {
+        .menu-main-menu-container {
+            display: none;
+        }
         .nav-primary {
             .menu-special-offer-container {
                 margin-right: 0;
@@ -29,9 +32,269 @@
             left: auto;
         }
     }
+    .hero-section {
+        .provider-logo {
+            width: 120px;
+            height: 120px;
+            float: none;
+            margin: 0 auto 20px auto;
+        }
+        .hero-content {
+            &.provider-hero {
+                float: none;
+                text-align: center;
+                margin: 0;
+            }
+        }
+        &.homepage-hero {
+            .hero-content {
+                h1 {
+                    font-size: 26px;
+                    line-height: normal;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: normal;
+                    br {
+                        display: none;
+                    }
+                }
+                .hero-logos {
+                    margin-top: 25px;
+                    img {
+                        height: 60px;
+                        margin: 0 8px;
+                    }
+                }
+            }
+        }
+    }
+    .conversion-box {
+        .box-inner {
+            padding: 20px;
+            header {
+                h2 {
+                    font-size: 20px;
+                }
+            }
+            .form-group {
+                .btn {
+                    padding: 10px 10px;
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .homepage-section {
+        .section-content {
+            h2 {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .arrow-cta {
+                &.has-arrow {
+                    background-position: 0% 50%;
+                }
+            }
+        }
+        &.result-section {
+            .exchange-results {
+                .main-header {
+                    .header-content {
+                        width: 75%;
+                        p {
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .sponsored-provider {
+                    .special-offer {
+                        .provider-image {
+                            left: 10px;
+                            width: 72px;
+                            height: 68px;
+                        }
+                        .provider-info {
+                            padding-left: 90px;
+                            .deal-info {
+                                flex-basis: 25%;
+                                h2 {
+                                    font-size: 16px;
+                                    line-height: normal;
+                                    margin-top: 5px;
+                                }
+                            }
+                            .deal-content {
+                                flex-basis: 45%;
+                                h3 {
+                                    font-size: 12px;
+                                    line-height: normal;
+                                }
+                                p {
+                                    font-size: 12px;
+                                }
+                            }
+                            .btn-holder {
+                                flex-basis: 30%;
+                                .btn {
+                                    padding: 0 15px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .result-box {
+                height: 120px;
+                .provider-image {
+                    left: 10px;
+                    width: 72px;
+                    height: 68px;
+                }
+                .result-content {
+                    padding-left: 0;
+                    .title {
+                        flex-basis: 25%;
+                        h3 {
+                            font-size: 16px;
+                            line-height: normal;
+                            padding-top: 80px;
+                            text-align: left;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                            margin: 0;
+                        }
+                    }
+                    .result-info {
+                        flex-basis: 50%;
+                        .amount {
+                            font-size: 14px;
+                            span {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .btn-holder {
+                        flex-basis: 25%;
+                        .btn {
+                            padding: 0 15px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &.best {
+                    height: 120px;
+                    .provider-image {
+                        left: 10px;
+                        width: 72px;
+                        height: 68px;
+                    }
+                    .result-content {
+                        padding-left: 0;
+                        .title {
+                            flex-basis: 25%;
+                            padding-left: 0;
+                            p {
+                                display: none;
+                            }
+                        }
+                        .result-info {
+                            flex-basis: 50%;
+                            .amount {
+                                font-size: 14px;
+                                span {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        .btn-holder {
+                            flex-basis: 25%;
+                            .btn {
+                                padding: 0 15px;
+                                font-size: 14px;
+                                height: 42px;
+                                line-height: 42px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.section-4 {
+            .col-sm-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .features-grid {
+                margin-bottom: 40px;
+                .col-sm-6 {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+        }
+    }
+    .content {
+        &.loop-archive {
+            .sponsored-provider {
+                .special-offer {
+                    .provider-image {
+                        left: 10px;
+                        width: 72px;
+                        height: 68px;
+                    }
+                    .provider-info {
+                        padding-left: 90px;
+                        .btn-holder {
+                            .btn {
+                                padding: 0 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.single-provider {
+            .comparison {
+                form {
+                    display: block;
+                    .form-group {
+                        margin: 0 0 15px 0;
+                        padding-right: 0;
+                        &.submit-form {
+                            text-align: center;
+                            margin-bottom: 0;
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sidebar .widget.widget_wdc_compare_rates_widget header h3 {
+        width: 100%;
+    }
+    .sidebar .widget.widget_wdc_compare_rates_widget header {
+        margin-bottom: 25px;
+    }
+    .sidebar .widget .btn {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
+    .no-mobile-small {
+        display: none;
+    }
+    .only-mobile-small {
+        display: block;
+    }
     body {
         font-size: 14px;
     }
@@ -111,6 +374,9 @@
                 left: 0;
                 bottom: -25px;
                 z-index: 1;
+                &.only-mobile {
+                    display: block;
+                }
                 img {
                     height: 50px;
                     margin: 0px 10px;
@@ -423,7 +689,7 @@
         }
         &.section-4 {
             padding: 0 0 40px 0;
-            .fearures-grid {
+            .features-grid {
                 margin-bottom: 40px;
                 .col-sm-6 {
                     width: 50%;
@@ -579,6 +845,7 @@
                             text-align: center;
                             padding-left: 5px;
                             padding-right: 5px;
+                            padding-top: 0;
                         }
                     }
                     .result-info {
@@ -622,6 +889,9 @@
                             padding-top: 45px;
                             flex-basis: 20%;
                             padding-left: 0;
+                            h3 {
+                                padding-top: 0;
+                            }
                             p {
                                 display: none;
                             }

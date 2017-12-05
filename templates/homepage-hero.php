@@ -13,7 +13,7 @@ $hero_logos = get_post_meta(get_the_id(), 'WDC_hero_logos', false );
     <div class="vertical">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5 npr no-mobile">
+                <div class="col-sm-5 npr no-mobile-small">
                     <?php echo do_shortcode('[conversion_box]');?>
                 </div>
                 <div class="col-sm-7">
@@ -26,7 +26,7 @@ $hero_logos = get_post_meta(get_the_id(), 'WDC_hero_logos', false );
                         }?>
 
                         <?php if(!empty($hero_logos)): ?>
-                        <div class="hero-logos no-mobile">
+                        <div class="hero-logos no-mobile-small">
                             <?php foreach($hero_logos as $logo){ 
                             $img_src_a = wp_get_attachment_image_src( $logo, 'full');
                             $img_src = $img_src_a[0];
@@ -42,7 +42,7 @@ $hero_logos = get_post_meta(get_the_id(), 'WDC_hero_logos', false );
     </div>
     <?php if(!empty($hero_logos)): ?>
 
-        <div class="hero-logos only-mobile">
+        <div class="hero-logos only-mobile-small">
             <?php foreach($hero_logos as $logo){ 
             $img_src_a = wp_get_attachment_image_src( $logo, 'full');
             $img_src = $img_src_a[0];
@@ -54,7 +54,7 @@ $hero_logos = get_post_meta(get_the_id(), 'WDC_hero_logos', false );
     <?php endif;?>
 </section>
 
-<div class="container only-mobile">
+<div class="container only-mobile-small">
     <section class="mobile-compare">
         <?php echo do_shortcode('[conversion_box slanted="no"]');?>
     </section>

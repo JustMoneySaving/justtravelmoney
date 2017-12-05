@@ -54,7 +54,7 @@ if(!empty($s4_box_4)){
     }
 }?>
 
-<div class="fearures-grid">
+<div class="features-grid">
     <?php if(!empty($section4_boxes_row1)): ?>
     <div class="row">
         <?php foreach($section4_boxes_row1 as $box){
