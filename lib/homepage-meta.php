@@ -57,12 +57,12 @@ $meta_boxes[] = array(
             ),
         ),
 
-		array(
-			'name'  => 'Provider Logos',
-			'id'    => "{$prefix}hero_logos",					
-			'desc'  => '75x75',
-			'type'  => 'image_advanced',
-		),
+		// array(
+		// 	'name'  => 'Provider Logos',
+		// 	'id'    => "{$prefix}hero_logos",					
+		// 	'desc'  => '75x75',
+		// 	'type'  => 'image_advanced',
+		// ),
 	),
 );
 
