@@ -48,13 +48,13 @@
                         homepage_results = $('#homepage-results');
 
                     conversion_popup.fadeIn(200, function() {
-                        var myBar = new ldBar("#mybar");
-                        myBar.set(100);
+                        var progressBar = new ldBar("#progressBar");
+                        progressBar.set(100);
                         setTimeout(function() {
                             conversion_popup.fadeOut(200, function() {
                                 homepage_results.show();
-                                myBar.set(0);
-                                $('#mybar').removeClass('ldBar').empty();
+                                progressBar.set(0);
+                                $('#progressBar').removeClass('ldBar').empty();
                             });
                         }, 2000);
                     });

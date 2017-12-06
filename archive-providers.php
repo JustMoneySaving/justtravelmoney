@@ -3,4 +3,4 @@
   <?php get_template_part('templates/content', 'providers'); ?>
 <?php endwhile; ?>
 
-<?php the_posts_navigation(); ?>
+<?php echo wdc_paginate_archive();?>

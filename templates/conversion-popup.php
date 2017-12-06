@@ -5,7 +5,7 @@
             <div class="content-box">
 
                 <div class="loader-holder">
-                    <div data-preset="fan" data-removed id="mybar" data-stroke="#45C62F" class=" label-center" data-value="0" style="height:100px; width:200px;"></div>
+                    <div data-preset="fan" data-removed id="progressBar" data-stroke="#45C62F" class="label-center" data-value="0" style="height:100px; width:200px;"></div>
                 </div>
                 <h2>We’re comparing the exchange rates</h2>
             </div>
