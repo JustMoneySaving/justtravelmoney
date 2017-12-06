@@ -96,23 +96,7 @@ $meta_boxes[] = array(
 	),
 );
 
-// INTRO
-$meta_boxes[] = array(
-	'title' => 'Provider Intro',
-	'pages' => array( 'providers' ),
-	'fields' => array(
-        array(
-            'name'  => 'Provider Intro Box',
-            'id'    => "{$prefix}provider_intro",					
-            'desc'  => '',
-			'type'  => 'wysiwyg',
-			'options' => array(
-				'media_buttons' => true,
-				'textarea_rows' => 5
-			),
-        ),
-	),
-);
+
 
 // ARTICLE TITLE
 $meta_boxes[] = array(
@@ -156,6 +140,7 @@ $meta_boxes[] = array(
 		),
 	),
 );
+
 
 // ABOUT PROVIDER
 $meta_boxes[] = array(
@@ -223,8 +208,6 @@ $meta_boxes[] = array(
 
 
 // OFFERS
-
-// ABOUT PROVIDER
 $meta_boxes[] = array(
 	'title' => 'Offer Details',
 	'pages' => array( 'special-offers' ),

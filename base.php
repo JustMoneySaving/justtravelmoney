@@ -1,5 +1,4 @@
 <?php
-
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 
@@ -23,8 +22,7 @@ if(is_singular('post')){
 
 if(is_singular('providers')){
   $row_class = 'row single-provider';
-}
-?>
+}?>
 
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -46,10 +44,10 @@ if(is_singular('providers')){
     <?php endif; ?>
 
     <div class="wrap <?php echo $container_class;?>" role="document">
+
       <?php if (Setup\display_breadcrumb()) : ?>
         <?php include Wrapper\breadcrumb_path(); ?>
       <?php endif; ?>
-
       
       <div class="content <?php echo $row_class;?>">
 
@@ -66,10 +64,9 @@ if(is_singular('providers')){
         <?php endif; ?>
 
         <main class="main <?php echo $main_class;?>">
-
-        <?php if (Setup\display_comparison_title()) : ?>
-          <?php include Wrapper\comparison_widget_path(); ?>
-        <?php endif; ?>
+          <?php if (Setup\display_comparison_title()) : ?>
+            <?php include Wrapper\comparison_widget_path(); ?>
+          <?php endif; ?>
 
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->

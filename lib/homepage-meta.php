@@ -30,6 +30,33 @@ $meta_boxes[] = array(
 			),
 		),
 
+		//SLIDES
+        array(
+            'name' => 'Hero Logos', // Optional
+            'id' => 'hero_logos',
+            'type' => 'group',
+			'clone' => true,
+            'fields' => array(
+                array(
+					'name'  => 'Provider Logo',
+					'id'    => "{$prefix}hero_logo",
+					'desc'  => '',
+					'type'  => 'image_advanced',
+					'max_file_uploads' => 1,
+					'columns' => 6,
+				),
+
+				array(
+					'name'  => 'Provider Logo URL',
+					'id'    => "{$prefix}hero_logo_url",
+					'desc'  => 'must contain http:// or https://',
+					'type'  => 'text',
+					'columns' => 6,
+				),
+				
+            ),
+        ),
+
 		array(
 			'name'  => 'Provider Logos',
 			'id'    => "{$prefix}hero_logos",					

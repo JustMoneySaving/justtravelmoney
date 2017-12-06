@@ -51,7 +51,8 @@ body {
     /* Enables momentum scrolling on iOS devices, may be removed by setting to 'auto' in your own CSS. */
 }
 
-body.single-post [canvas=container] {
+body.single-post [canvas=container],
+body.page-template-template-contact [canvas=container] {
     background-color: $white;
 }
 

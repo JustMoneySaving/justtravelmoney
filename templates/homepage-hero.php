@@ -6,7 +6,7 @@ if($hero_image){
 }
 $hero_title = rwmb_meta( 'WDC_hero_title' );
 $hero_content = rwmb_meta( 'WDC_hero_content' );
-$hero_logos = get_post_meta(get_the_id(), 'WDC_hero_logos', false );
+$hero_logos = get_post_meta(get_the_id(), 'hero_logos', false );
 ?>
 
 <section class="hero-section homepage-hero has-overlay" style="background-image: url(<?php echo $hero_image_src;?>);">
@@ -27,12 +27,27 @@ $hero_logos = get_post_meta(get_the_id(), 'WDC_hero_logos', false );
 
                         <?php if(!empty($hero_logos)): ?>
                         <div class="hero-logos no-mobile-small">
-                            <?php foreach($hero_logos as $logo){ 
-                            $img_src_a = wp_get_attachment_image_src( $logo, 'full');
-                            $img_src = $img_src_a[0];
-                            ?>
-                            <img src="<?php echo $img_src;?>" alt="partner-<?php echo $logo;?>" />
-                            <?php } ?>
+                            <?php foreach($hero_logos as $logo): 
+                                foreach($logo as $logo_group){
+                                    $logo_url = '#';
+                                    $logo_img_src = '';
+                                    $logo_img_id = '';
+
+                                    if(isset($logo_group['WDC_hero_logo_url'])){
+                                        $logo_url = $logo_group['WDC_hero_logo_url'];
+                                    }
+
+                                    if(isset($logo_group['WDC_hero_logo'])){
+                                        $logo_img_a = $logo_group['WDC_hero_logo'];
+                                        $logo_img_id = $logo_img_a[0];
+                                        $img_src_a = wp_get_attachment_image_src( $logo_img_id, 'full');
+                                        $logo_img_src = $img_src_a[0];
+                                    }?>
+                                    <a href="<?php echo $logo_url;?>">
+                                        <img src="<?php echo $logo_img_src;?>" alt="partner-<?php echo $logo_img_id;?>" />
+                                    </a>
+                                <?php } ?>
+                            <?php endforeach; ?>
                         </div>
                         <?php endif;?>
                     </div>
@@ -40,17 +55,31 @@ $hero_logos = get_post_meta(get_the_id(), 'WDC_hero_logos', false );
             </div>
         </div>
     </div>
+
     <?php if(!empty($hero_logos)): ?>
-
         <div class="hero-logos only-mobile-small">
-            <?php foreach($hero_logos as $logo){ 
-            $img_src_a = wp_get_attachment_image_src( $logo, 'full');
-            $img_src = $img_src_a[0];
-            ?>
-            <img src="<?php echo $img_src;?>" alt="partner-<?php echo $logo;?>" />
-            <?php } ?>
-        </div>
+            <?php foreach($hero_logos as $logo): 
+                foreach($logo as $logo_group){
+                    $logo_url = '#';
+                    $logo_img_src = '';
+                    $logo_img_id = '';
 
+                    if(isset($logo_group['WDC_hero_logo_url'])){
+                        $logo_url = $logo_group['WDC_hero_logo_url'];
+                    }
+
+                    if(isset($logo_group['WDC_hero_logo'])){
+                        $logo_img_a = $logo_group['WDC_hero_logo'];
+                        $logo_img_id = $logo_img_a[0];
+                        $img_src_a = wp_get_attachment_image_src( $logo_img_id, 'full');
+                        $logo_img_src = $img_src_a[0];
+                    }?>
+                    <a href="<?php echo $logo_url;?>">
+                        <img src="<?php echo $logo_img_src;?>" alt="partner-<?php echo $logo_img_id;?>" />
+                    </a>
+                <?php } ?>
+            <?php endforeach; ?>
+        </div>
     <?php endif;?>
 </section>
 

@@ -8,12 +8,10 @@ $offer_args = array(
     'meta_value' => '1'
 );
 
-query_posts($offer_args);
-?>
+query_posts($offer_args);?>
 
-<?php if (have_posts()) : ?>
-
-<?php while (have_posts()) : the_post(); 
+<?php if (have_posts()) :
+while (have_posts()) : the_post(); 
 $offer_provider = rwmb_meta( 'WDC_offer_provider' );
 $offer_desc = rwmb_meta( 'WDC_offer_desc' );
 $offer_copy = rwmb_meta( 'WDC_offer_copy' );

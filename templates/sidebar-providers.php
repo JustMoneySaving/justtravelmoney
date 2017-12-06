@@ -1,9 +1,7 @@
 <?php
 $about_provider = rwmb_meta( 'WDC_about_provider');
 $about_provider_url = rwmb_meta( 'WDC_about_provider_url');
-
 $provider_fact_box = rwmb_meta( 'WDC_provider_fact_box');
-
 ?>
 
 <?php if($about_provider):?>

@@ -18,10 +18,21 @@
       <?php endif; ?>
 
       <?php if (has_nav_menu('offer_nav')) :
-        wp_nav_menu(['theme_location' => 'offer_nav', 'menu_id' => 'offer-menu', 'menu_class' => 'nav']);
-      endif; ?>
-
       
+        // We need to display only the latest one
+        $offer_args_h = array(
+            'post_type' => 'special-offers',
+            'post_status'    => 'publish',
+            'posts_per_page' => 1,
+            'meta_key' => 'WDC_offer_active',
+            'meta_value' => '1'
+        );
+        // The Query
+        $offers_query = new WP_Query( $offer_args_h );
+        if ($offers_query->have_posts()) :
+          wp_nav_menu(['theme_location' => 'offer_nav', 'menu_id' => 'offer-menu', 'menu_class' => 'nav']);
+        endif; wp_reset_query(); 
+      endif;?>
 
       <?php get_template_part('templates/special-offer'); ?>
     </nav>

@@ -18,10 +18,12 @@ $sage_includes = [
   'lib/customizer.php', // Theme customizer
   'lib/misc.php', // Misc Functions
   'lib/homepage-meta.php', // Homepage Metabox
+  'lib/contact-meta.php', // Contact Metabox
   'lib/general-meta.php', // Homepage Metabox
   'lib/shortcodes.php', // Custom Shortcodes
   'lib/cpt.php', // Custom Post Types
   'lib/widgets.php', // Custom Widgets
+  'lib/pagination.php' // Custom Pagination
 ];
 
 foreach ($sage_includes as $file) {

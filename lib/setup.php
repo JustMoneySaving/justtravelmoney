@@ -131,8 +131,7 @@ function display_hero() {
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
-    is_front_page(),
-    is_page_template('template-custom.php'),
+    is_front_page()
   ]);
 
   return apply_filters('sage/display_hero', $display);
@@ -153,7 +152,8 @@ function display_breadcrumb() {
     is_tag(),
     is_archive(),
     is_search(),
-    is_singular('providers')
+    is_singular('providers'),
+    is_page_template('template-contact.php'),
   ]);
 
   return apply_filters('sage/display_breadcrumb', $display);
@@ -224,6 +224,7 @@ function assets() {
   wp_enqueue_script('slidebars', Assets\asset_path('scripts/slidebars.js'), null, null, true);
   
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 

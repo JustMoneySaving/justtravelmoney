@@ -3,7 +3,6 @@ $provider_header_title = rwmb_meta( 'WDC_provider_header_title' );
 $provider_header_subtitle = rwmb_meta( 'WDC_provider_header_subtitle' );
 $provider_header_image = rwmb_meta( 'WDC_provider_header_image' );
 $provider_header_image_src = get_bloginfo('template_directory').'/assets/images/travel-money-guide.png';
-$provider_video_id = rwmb_meta( 'WDC_provider_video_id' );
 
 if(!empty($provider_header_image)):
   //Array only contains one item, always
@@ -35,12 +34,6 @@ endif;?>
 
     <div class="entry-content">
       <?php the_content(); ?>
-
-      <?php if($provider_video_id){?>
-        <div class="article-video">
-          <iframe width="450" height="250" src="https://www.youtube.com/embed/<?php echo $provider_video_id ;?>?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-      <?php } ?>
     </div>
   </article>
 <?php endwhile; ?>

@@ -117,6 +117,15 @@
                         content: "• ";
                         color: $green;
                     }
+                    a {
+                        color: $body-color;
+                        font-weight: 500;
+                        transition: all ease 250ms;
+                        &:hover {
+                            color: $green;
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
         }
