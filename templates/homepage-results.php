@@ -1,4 +1,4 @@
-<section class="homepage-section result-section">
+<section class="homepage-section result-section" id="homepage-results">
     <div class="container">
         <div class="exchange-results">
             <header class="main-header">

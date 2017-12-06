@@ -220,6 +220,8 @@ function assets() {
 
   wp_enqueue_script('modernizr', Assets\asset_path('scripts/modernizr.js'), null, null, true);
 
+  wp_enqueue_script('loading-bar', Assets\asset_path('scripts/loading-bar.js'), null, null, true);
+  
   wp_enqueue_script('slidebars', Assets\asset_path('scripts/slidebars.js'), null, null, true);
   
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);

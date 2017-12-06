@@ -26,6 +26,12 @@
                 "scripts/modernizr.js"
             ]
         },
+
+        "loading-bar.js": {
+            "files": [
+                "scripts/loading-bar.js"
+            ]
+        },
         "slidebars.js": {
             "files": [
                 "scripts/slidebars.js"

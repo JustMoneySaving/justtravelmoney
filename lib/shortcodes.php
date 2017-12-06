@@ -32,6 +32,7 @@ function wdc_conversion_box_shortcode( $atts ) {
         ), 
     $atts, 'conversion_box' );
     $slanted_class = '';
+    $class = 'comparison-form';
 
     $label1 = __('AMOUNT TO CONVERT', 'sage');
     $label2 = __('CURRENCY YOU WANT', 'sage');
@@ -47,6 +48,7 @@ function wdc_conversion_box_shortcode( $atts ) {
         $label2 = __('Select The Currency You Want', 'sage');
         $label3 = __('Enter Your Email Address', 'sage');
         $actions = 'method="get" id="compare-form" action="'.esc_url( home_url( '/' ) ).'"';
+        $class = 'comparison-form-widget';
     }
     
     $html = '';
@@ -60,7 +62,7 @@ function wdc_conversion_box_shortcode( $atts ) {
         </header>';
     }
 
-    $html .= '<form '.$actions.'>
+    $html .= '<form '.$actions.' class="'.$class.'">
             <div class="form-group">
                 <label for="currency-amount">'.$label1.'</label>
                 <input type="text" id="currency-amount" name="currency-amount" placeholder="'.__('e.g £500.00', 'sage').'" />

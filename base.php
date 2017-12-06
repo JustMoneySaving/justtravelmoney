@@ -83,10 +83,13 @@ if(is_singular('providers')){
       get_template_part('templates/footer');
     ?>
     </div><!-- /canvas -->
+    
+    <?php get_template_part('templates/conversion-popup');?>
 
     <?php if (has_nav_menu('mobile_navigation')) : 
       get_template_part('templates/mobile-nav');
     endif; ?>
+
 
     <?php wp_footer(); ?>
   </body>
