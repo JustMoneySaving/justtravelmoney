@@ -20,13 +20,11 @@
         "jquery.js": {
             "bower": ["jquery"]
         },
-
         "modernizr.js": {
             "files": [
                 "scripts/modernizr.js"
             ]
         },
-
         "loading-bar.js": {
             "files": [
                 "scripts/loading-bar.js"

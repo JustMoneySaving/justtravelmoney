@@ -88,3 +88,6 @@ $hero_logos = get_post_meta(get_the_id(), 'hero_logos', false );
         <?php echo do_shortcode('[conversion_box slanted="no"]');?>
     </section>
 </div>
+
+<div id="scrollAnchor"></div>
+

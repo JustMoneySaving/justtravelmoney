@@ -224,9 +224,6 @@ function display_guide_results() {
 }
 
 
-
-
-
 /**
  * Theme assets
  */

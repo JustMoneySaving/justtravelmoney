@@ -40,12 +40,13 @@
                     controller.toggle('slidebar-1');
                 });
 
-
                 $('form.comparison-form').submit(function(e) {
                     e.preventDefault();
 
+
                     var conversion_popup = $('#conversion-popup'),
-                        homepage_results = $('#homepage-results');
+                        homepage_results = $('#homepage-results'),
+                        ww = $(window).width();
 
                     conversion_popup.fadeIn(200, function() {
                         var progressBar = new ldBar("#progressBar");
@@ -55,6 +56,13 @@
                                 homepage_results.show();
                                 progressBar.set(0);
                                 $('#progressBar').removeClass('ldBar').empty();
+
+                                //Scroll results into view
+                                if (ww >= 768) {
+                                    $('[canvas=container]').animate({
+                                        scrollTop: $('#scrollAnchor').offset().top - 90
+                                    }, 800);
+                                }
                             });
                         }, 2000);
                     });
