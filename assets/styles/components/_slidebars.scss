@@ -28,7 +28,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 
@@ -52,6 +52,7 @@ body {
 }
 
 body.single-post [canvas=container],
+body.single-currency-guides [canvas=container],
 body.page-template-template-contact [canvas=container] {
     background-color: $white;
 }

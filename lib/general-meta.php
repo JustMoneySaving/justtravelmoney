@@ -283,6 +283,121 @@ $meta_boxes[] = array(
 );
 
 
+// CURRENCY GUIDE SETUP
+$meta_boxes[] = array(
+	'title' => 'Currency Guide Setup',
+	'pages' => array( 'currency-guides' ),
+	'fields' => array(
+		array(
+			'name'  => 'Currency Name',
+			'id'    => "{$prefix}currenct_name",
+			'desc'  => 'this will appear in title sections',
+			'type'  => 'text',
+			'std'   =>  '',
+		),
+
+		array(
+            'name'  => 'Currency Logo',
+            'id'    => "{$prefix}currency_logo",					
+            'desc'  => '200x120',
+            'type'  => 'image_advanced',
+            'max_file_uploads' => 1,
+        ),
+	),
+);
+
+// CURRENCY GUIDE HERO
+$meta_boxes[] = array(
+	'title' => 'Currency Guide Hero',
+	'pages' => array( 'currency-guides' ),
+	'fields' => array(
+
+		array(
+			'name'  => 'Hero title',
+			'id'    => "{$prefix}guide_hero_title",
+			'desc'  => '',
+			'type'  => 'text',
+			'std'   =>  '',
+		),
+	
+	    array(
+			'name'  => 'Hero Content',
+			'id'    => "{$prefix}guide_hero_content",
+			'desc'  => '',
+			'type'  => 'wysiwyg',
+			'options' => array(
+				'media_buttons' => false,
+				'textarea_rows' => 5
+			),
+		),
+	),
+);
+
+// CURRENCY GUIDE CONTENT REPEATER
+$meta_boxes[] = array(
+	'title' => 'Section Repeater',
+	'pages' => array( 'currency-guides' ),
+	'fields' => array(
+		array(
+			'name' => 'Currency Guide Section', // Optional
+			'id' => 'guide_section',
+			'type' => 'group',
+			'clone' => true,
+			'fields' => array(
+				array(
+					'name'  => 'Section Title',
+					'id'    => "{$prefix}section_title",
+					'desc'  => '',
+					'type'  => 'text',
+				),
+
+				array(
+					'name'  => 'Section Content',
+					'id'    => "{$prefix}section_content",
+					'desc'  => '',
+					'type'  => 'wysiwyg',
+					'options' => array(
+						'media_buttons' => true,
+						'textarea_rows' => 5
+					),
+				),
+			),
+		),
+	),
+);
+
+// CURRENCY GUIDE SIDEBAR REPEATER
+$meta_boxes[] = array(
+	'title' => 'Sidebar Repeater',
+	'pages' => array( 'currency-guides' ),
+	'fields' => array(
+		array(
+			'name' => 'Currency Guide Sidebar Item', // Optional
+			'id' => 'guide_sidebar',
+			'type' => 'group',
+			'clone' => true,
+			'fields' => array(
+				array(
+					'name'  => 'Sidebar Title',
+					'id'    => "{$prefix}sidebar_title",
+					'desc'  => '',
+					'type'  => 'text',
+				),
+
+				array(
+					'name'  => 'Sidebar Content',
+					'id'    => "{$prefix}sidebar_content",
+					'desc'  => '',
+					'type'  => 'wysiwyg',
+					'options' => array(
+						'media_buttons' => true,
+						'textarea_rows' => 5
+					),
+				),
+			),
+		),
+	),
+);
 
 
 

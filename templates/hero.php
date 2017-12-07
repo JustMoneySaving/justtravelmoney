@@ -54,12 +54,20 @@ if(is_singular('providers')){
         }
     endif;
 }
+
+if(is_singular('currency-guides')){
+    $hero_title = get_the_title();
+    $hero_title_meta = rwmb_meta( 'WDC_guide_hero_title', array(), $pid );
+    if($hero_title_meta){
+        $hero_title = $hero_title_meta;
+    }
+    $hero_content = rwmb_meta( 'WDC_guide_hero_content', array(), $pid );
+}
 ?>
 
 <section class="hero-section page-hero has-overlay" style="background-image: url(<?php echo $hero_image_src;?>);">
     <div class="vertical">
         <div class="container">
-
             <?php if(is_singular('providers')){ ?>
                 <div class="provider-logo">
                     <div class="logo-inner">

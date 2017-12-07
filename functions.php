@@ -22,6 +22,7 @@ $sage_includes = [
   'lib/general-meta.php', // Homepage Metabox
   'lib/shortcodes.php', // Custom Shortcodes
   'lib/cpt.php', // Custom Post Types
+  'lib/cpt-permalinks.php', // Remove CPT Permalink 
   'lib/widgets.php', // Custom Widgets
   'lib/pagination.php' // Custom Pagination
 ];

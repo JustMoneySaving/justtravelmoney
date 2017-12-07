@@ -25,7 +25,7 @@ function wdc_faq_init() {
    $args = array( 
        'labels' => $labels,
        'hierarchical' => false,
-       'menu_icon' => 'dashicons-heart',
+       'menu_icon' => 'dashicons-editor-help',
        'public' => true,
        'show_ui' => true,
        'show_in_menu' => true,
@@ -74,9 +74,7 @@ register_taxonomy('faq_category', 'faqs', array(
 }
 add_action( 'init', 'add_custom_taxonomies_faq', 0 );
 
-
 //PROVIDERS
-
 add_action( 'init', 'wdc_provider_init' );
 function wdc_provider_init() {
 
@@ -98,7 +96,7 @@ function wdc_provider_init() {
    $args = array( 
        'labels' => $labels,
        'hierarchical' => false,
-       'menu_icon' => 'dashicons-heart',
+       'menu_icon' => 'dashicons-download',
        'public' => true,
        'show_ui' => true,
        'show_in_menu' => true,
@@ -118,7 +116,6 @@ function wdc_provider_init() {
 
    register_post_type( 'providers', $args );
 }
-
 
 //SPECIAL OFFERS
 
@@ -143,7 +140,7 @@ function wdc_special_offer_init() {
    $args = array( 
        'labels' => $labels,
        'hierarchical' => false,
-       'menu_icon' => 'dashicons-heart',
+       'menu_icon' => 'dashicons-awards',
        'public' => true,
        'show_ui' => true,
        'show_in_menu' => true,
@@ -162,4 +159,47 @@ function wdc_special_offer_init() {
    );
 
    register_post_type( 'special-offers', $args );
+}
+
+// CURRENCY GUIDES
+add_action( 'init', 'wdc_currency_guides_init' );
+function wdc_currency_guides_init() {
+
+   $labels = array( 
+       'name' => 'Currency Guides',
+       'singular_name' => 'Currency Guide',
+       'add_new' => 'Add New',
+       'add_new_item' => 'Add New Guide',
+       'edit_item' => 'Edit Guide',
+       'new_item' => 'New Guide',
+       'view_item' => 'View Guides',
+       'search_items' => 'Search Guides',
+       'not_found' => 'No Guides found',
+       'not_found_in_trash' => 'No Guides found in Trash',
+       'parent_item_colon' => 'Parent Guide:',
+       'menu_name' => 'Currency Guides',
+   );
+
+   $args = array( 
+       'labels' => $labels,
+       'hierarchical' => false,
+       'menu_icon' => 'dashicons-analytics',
+       'public' => true,
+       'show_ui' => true,
+       'show_in_menu' => true,
+       'show_in_nav_menus' => true,
+       'publicly_queryable' => true,
+       'exclude_from_search' => true,
+       'has_archive' => false,
+       'query_var' => true,
+       'can_export' => true,
+       'supports' => array('title', 'thumbnail'),
+       'rewrite' =>  array( 
+            'slug' => 'currency-guides', 
+            'with_front' => false,
+        ),
+       'capability_type' => 'post'
+   );
+
+   register_post_type( 'currency-guides', $args );
 }

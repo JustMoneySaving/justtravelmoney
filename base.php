@@ -20,6 +20,10 @@ if(is_singular('post')){
   $row_class = 'row single-blog';
 }
 
+if(is_singular('currency-guides')){
+  $row_class = 'row single-blog single-guide';
+}
+
 if(is_singular('providers')){
   $row_class = 'row single-provider';
 }?>
@@ -43,12 +47,16 @@ if(is_singular('providers')){
       <?php include Wrapper\hero_path(); ?>
     <?php endif; ?>
 
+    <?php if (Setup\display_guide_results()) : ?>
+        <?php get_template_part('templates/results');?>
+    <?php endif; ?>
+
     <div class="wrap <?php echo $container_class;?>" role="document">
 
       <?php if (Setup\display_breadcrumb()) : ?>
         <?php include Wrapper\breadcrumb_path(); ?>
       <?php endif; ?>
-      
+
       <div class="content <?php echo $row_class;?>">
 
         <?php if (Setup\display_sponsored_offer()) : ?>

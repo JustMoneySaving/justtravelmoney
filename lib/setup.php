@@ -209,6 +209,25 @@ function display_comparison_title() {
 }
 
 /**
+ * Determine which pages should display the comparison result
+ */
+function display_guide_results() {
+  static $display;
+
+  isset($display) || $display = in_array(true, [
+    // The box will be displayed if ANY of the following return true.
+    // @link https://codex.wordpress.org/Conditional_Tags
+    is_singular('currency-guides'),
+  ]);
+
+  return apply_filters('sage/display_guide_results', $display);
+}
+
+
+
+
+
+/**
  * Theme assets
  */
 function assets() {
@@ -227,7 +246,9 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 
 }
+
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
 
 /**
  * Remove emoji script

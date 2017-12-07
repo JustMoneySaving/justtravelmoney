@@ -30,7 +30,7 @@ $meta_boxes[] = array(
 			),
 		),
 
-		//SLIDES
+		//Repeater
         array(
             'name' => 'Hero Logos', // Optional
             'id' => 'hero_logos',

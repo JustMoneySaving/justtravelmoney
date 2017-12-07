@@ -1,6 +1,6 @@
 <?php 
 $container_class = 'container-fluid';
-if(is_front_page()){
+if(is_front_page() || is_singular('currency-guides')){
     $container_class = '';  
 }
 // We need to display only the latest one
@@ -68,7 +68,7 @@ if($offer_url ){
                     <?php } ?>
                 </div>
 
-                <?php if($highlight_copy && !is_front_page()){?>
+                <?php if($highlight_copy && !is_front_page() && !is_singular('currency-guides')){?>
                 <div class="deal-benefit">
                     <div class="inner">
                         <div class="vm">
@@ -78,7 +78,7 @@ if($offer_url ){
                 </div>
                 <?php } ?>
 
-                <?php if($offer_copy && is_front_page()){ ?>
+                <?php if($offer_copy && is_front_page() || is_singular('currency-guides')){ ?>
                 <div class="deal-content">
                     <div class="inner">
                         <div class="vm">

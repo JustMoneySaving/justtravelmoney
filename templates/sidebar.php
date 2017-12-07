@@ -5,6 +5,8 @@
 }else if(is_singular('providers')){
     get_template_part('templates/sidebar', 'providers');
     dynamic_sidebar('sidebar-providers');
+}else if(is_singular('currency-guides')){
+    get_template_part('templates/sidebar', 'currency-guides');
 }else if(is_page_template('template-contact.php')){
     get_template_part('templates/sidebar', 'contact');
 }else{

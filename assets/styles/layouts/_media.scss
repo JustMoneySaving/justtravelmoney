@@ -734,6 +734,10 @@
         }
         &.result-section {
             padding-bottom: 30px;
+            &.results-single {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
             .exchange-results {
                 margin-top: 0;
                 padding-top: 0;
