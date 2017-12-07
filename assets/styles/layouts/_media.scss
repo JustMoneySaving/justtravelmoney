@@ -440,7 +440,8 @@
                 .read-more {
                     text-align: center;
                 }
-                &.providers {
+                &.providers,
+                &.currency-guides {
                     padding: 5px 5px 10px;
                     .post-image {
                         left: 5px;
@@ -576,7 +577,8 @@
                     height: 180px;
                 }
             }
-            article.providers {
+            article.providers,
+            article.currency-guides {
                 header {
                     margin-bottom: 15px;
                     .header-inner {

@@ -299,7 +299,7 @@ $meta_boxes[] = array(
 		array(
             'name'  => 'Currency Logo',
             'id'    => "{$prefix}currency_logo",					
-            'desc'  => '200x120',
+            'desc'  => '160x125',
             'type'  => 'image_advanced',
             'max_file_uploads' => 1,
         ),

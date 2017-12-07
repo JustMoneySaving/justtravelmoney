@@ -190,13 +190,13 @@ function wdc_currency_guides_init() {
        'show_in_nav_menus' => true,
        'publicly_queryable' => true,
        'exclude_from_search' => true,
-       'has_archive' => false,
+       'has_archive' => true,
        'query_var' => true,
        'can_export' => true,
        'supports' => array('title', 'thumbnail'),
        'rewrite' =>  array( 
             'slug' => 'currency-guides', 
-            'with_front' => false,
+            'with_front' => true,
         ),
        'capability_type' => 'post'
    );

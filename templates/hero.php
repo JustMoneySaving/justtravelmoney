@@ -35,6 +35,11 @@ if(is_post_type_archive('providers')){
     At the best rate, 500 Pounds buys you 212 USD from Travelex';
 }
 
+if(is_post_type_archive('currency-guides')){
+    $hero_title = 'Currency Guides';
+    $hero_content = '';
+}
+
 if(is_singular('providers')){
     $hero_title = get_the_title();
     $hero_image = wp_get_attachment_image_src( get_post_thumbnail_id($pid), 'full' );
