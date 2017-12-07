@@ -5,6 +5,9 @@ footer.content-info {
     border-bottom: 5px solid $grey-border;
     .footer-logo {
         margin-bottom: 25px;
+        img {
+            max-width: 250px;
+        }
     }
     .nav-secondary {
         margin-bottom: 30px;

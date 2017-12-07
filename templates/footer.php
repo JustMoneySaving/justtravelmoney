@@ -1,8 +1,8 @@
 <footer class="content-info">
   <div class="container">
     <div class="footer-logo">
-      <img class="img-logo" src="<?php bloginfo('template_directory');?>/assets/images/JustTravelMoney-logo-footer.png" alt="logo"/>
-      <img class="svg-logo" src="<?php bloginfo('template_directory');?>/assets/images/JustTravelMoney-logo-footer.svg" alt="logo"/>
+      <img class="img-logo" src="<?php bloginfo('template_directory');?>/assets/images/jtm-logo-footer.png" alt="logo"/>
+      <img class="svg-logo" src="<?php bloginfo('template_directory');?>/assets/images/jtm-logo-footer.svg" alt="logo"/>
     </div>
 
     <nav class="nav-secondary">
