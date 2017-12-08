@@ -85,7 +85,7 @@ $hero_logos = get_post_meta(get_the_id(), 'hero_logos', false );
 
 <div class="container only-mobile-small">
     <section class="mobile-compare">
-        <?php echo do_shortcode('[conversion_box slanted="no"]');?>
+        <?php echo do_shortcode('[conversion_box placement="mobile" slanted="no"]');?>
     </section>
 </div>
 

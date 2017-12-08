@@ -87,6 +87,20 @@
                     $(this).autocomplete('search', $(this).val())
                 });
 
+                // Mobile Select 
+                $("#currency-select-mobile")
+                    .autocomplete({
+                        source: data,
+                        minLength: 0
+                    }).autocomplete("instance")._renderItem = function(ul, item) {
+                        return $("<li></li>")
+                            .data("item.autocomplete", item)
+                            .append("<a><i class='flag-icon flag-icon-" + item.icon + "'></i>" + item.label + "</a>")
+                            .appendTo(ul);
+                    };
+                $("#currency-select-mobile").focus(function() {
+                    $(this).autocomplete('search', $(this).val())
+                });
             }
         },
         // Home page

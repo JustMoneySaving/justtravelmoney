@@ -166,3 +166,9 @@
     font-weight: bold;
     color: $body-color !important;
 }
+
+@media only screen and (max-width: 480px) {
+    .ui-menu {
+        max-width: 303px;
+    }
+}
