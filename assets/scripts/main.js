@@ -68,6 +68,25 @@
                     });
                 });
 
+                // AUTOCOMPLETE
+
+                //Data is stored as an array in setup.php
+                var data = wdc.currency_list;
+
+                $("#currency-select")
+                    .autocomplete({
+                        source: data,
+                        minLength: 0
+                    }).autocomplete("instance")._renderItem = function(ul, item) {
+                        return $("<li></li>")
+                            .data("item.autocomplete", item)
+                            .append("<a><i class='flag-icon flag-icon-" + item.icon + "'></i>" + item.label + "</a>")
+                            .appendTo(ul);
+                    };
+                $("#currency-select").focus(function() {
+                    $(this).autocomplete('search', $(this).val())
+                });
+
             }
         },
         // Home page

@@ -240,7 +240,106 @@ function assets() {
   
   wp_enqueue_script('slidebars', Assets\asset_path('scripts/slidebars.js'), null, null, true);
   
-  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  wp_enqueue_script( 'jquery-ui-autocomplete' );
+
+  wp_register_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+
+  // Replace This array with stored array
+
+  $currency_array = array(
+    array(
+      'label' => 'Euro - (EUR)',
+      'value' => 'EUR',
+      'icon' => 'eu',
+    ), 
+    array(
+      'label' => 'USA - U.S. Dollar (USD)',
+      'value' => 'USD',
+      'icon' => 'us',
+    ),
+
+    array(
+      'label' => 'Australia - Australian Dollar (AUD)',
+      'value' => 'AUD',
+      'icon' => 'au',
+    ),
+
+    array(
+      'label' => 'Austria - Euro (EUR)',
+      'value' => 'EUR',
+      'icon' => 'at',
+    ),
+
+    array(
+      'label' => 'Canada - Canadian Dollar (CAD)',
+      'value' => 'CAD',
+      'icon' => 'ca',
+    ),
+
+    array(
+      'label' => 'Bosnia and Herzegovina - Konvertibilna Marka (BAM)',
+      'value' => 'BAM',
+      'icon' => 'ba',
+    ),
+
+    array(
+      'label' => 'China - Chinese Renminbi (CNY)',
+      'value' => 'CNY',
+      'icon' => 'cn',
+    ),
+
+    array(
+      'label' => 'Denmark - Danish Krone (DKK)',
+      'value' => 'DKK',
+      'icon' => 'dk',
+    ),
+
+    array(
+      'label' => 'Egypt - Egyptian Pound (EGP)',
+      'value' => 'EGP',
+      'icon' => 'eg',
+    ),
+
+    array(
+      'label' => 'France - Euro (EUR)',
+      'value' => 'EUR',
+      'icon' => 'fr',
+    ),
+
+    array(
+      'label' => 'Mexico - Mexican Peso (MXN)',
+      'value' => 'MXN',
+      'icon' => 'mx',
+    ),
+
+    array(
+      'label' => 'Sweden - Swedish Krona (SEK)',
+      'value' => 'SEK',
+      'icon' => 'se'
+    ),
+
+    array(
+      'label' => 'Switzerland - Swiss Franc (CHF)',
+      'value' => 'CHF',
+      'icon' => 'ch',
+    ),
+
+    array(
+      'label' => 'United Kingdom - British Pound (GBP)',
+      'value' => 'GBP',
+      'icon' => 'gb',
+    ),
+
+  );
+
+  wp_localize_script( 'sage/js', 'wdc', 
+    array( 
+      'ajax_url' => admin_url( 'admin-ajax.php' ),
+      'currency_list' => $currency_array
+    )
+  );
+
+  wp_enqueue_script('sage/js');
 
 }
 
