@@ -1,0 +1,42 @@
+{
+    "dependencies": {
+        "main.js": {
+            "files": [
+                "scripts/main.js"
+            ],
+            "main": true
+        },
+        "main.css": {
+            "files": [
+                "styles/main.scss"
+            ],
+            "main": true
+        },
+        "customizer.js": {
+            "files": [
+                "scripts/customizer.js"
+            ]
+        },
+        "jquery.js": {
+            "bower": ["jquery"]
+        },
+        "modernizr.js": {
+            "files": [
+                "scripts/modernizr.js"
+            ]
+        },
+        "loading-bar.js": {
+            "files": [
+                "scripts/loading-bar.js"
+            ]
+        },
+        "slidebars.js": {
+            "files": [
+                "scripts/slidebars.js"
+            ]
+        }
+    },
+    "config": {
+        "devUrl": "http://localhost/jtm/"
+    }
+}

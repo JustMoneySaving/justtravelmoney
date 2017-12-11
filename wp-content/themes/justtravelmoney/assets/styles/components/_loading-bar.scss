@@ -1,0 +1,21 @@
+.ldBar {
+    position: relative;
+    margin: 0 auto;
+}
+
+.ldBar.label-center>.ldBar-label {
+    position: absolute;
+    bottom: 0;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+
+.ldBar-label:after {
+    content: "%";
+    display: inline
+}
+
+.ldBar.no-percent .ldBar-label:after {
+    content: ""
+}
