@@ -2,6 +2,11 @@
     "dependencies": {
         "main.js": {
             "files": [
+                "scripts/modernizr.js",
+
+                "scripts/loading-bar.js",
+                "scripts/slidebars.js",
+
                 "scripts/main.js"
             ],
             "main": true
@@ -19,24 +24,9 @@
         },
         "jquery.js": {
             "bower": ["jquery"]
-        },
-        "modernizr.js": {
-            "files": [
-                "scripts/modernizr.js"
-            ]
-        },
-        "loading-bar.js": {
-            "files": [
-                "scripts/loading-bar.js"
-            ]
-        },
-        "slidebars.js": {
-            "files": [
-                "scripts/slidebars.js"
-            ]
         }
     },
     "config": {
-        "devUrl": "http://localhost/jtm/"
+        "devUrl": "http://justtravelmoneycouk.kbox.site/"
     }
 }
