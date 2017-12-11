@@ -1,0 +1,6 @@
+# Include your project-specific ignores in this file
+bower_components
+node_modules
+npm-debug.log
+vendor
+.github

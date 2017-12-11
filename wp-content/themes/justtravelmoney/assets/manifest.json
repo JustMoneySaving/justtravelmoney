@@ -1,0 +1,32 @@
+{
+    "dependencies": {
+        "main.js": {
+            "files": [
+                "scripts/modernizr.js",
+
+                "scripts/loading-bar.js",
+                "scripts/slidebars.js",
+
+                "scripts/main.js"
+            ],
+            "main": true
+        },
+        "main.css": {
+            "files": [
+                "styles/main.scss"
+            ],
+            "main": true
+        },
+        "customizer.js": {
+            "files": [
+                "scripts/customizer.js"
+            ]
+        },
+        "jquery.js": {
+            "bower": ["jquery"]
+        }
+    },
+    "config": {
+        "devUrl": "http://justtravelmoneycouk.kbox.site/"
+    }
+}
