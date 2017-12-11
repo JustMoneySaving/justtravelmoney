@@ -84,7 +84,7 @@
                             .appendTo(ul);
                     };
                 $("#currency-select").focus(function() {
-                    $(this).autocomplete('search', $(this).val())
+                    $(this).autocomplete('search', $(this).val());
                 });
 
                 // Mobile Select 
@@ -99,7 +99,7 @@
                             .appendTo(ul);
                     };
                 $("#currency-select-mobile").focus(function() {
-                    $(this).autocomplete('search', $(this).val())
+                    $(this).autocomplete('search', $(this).val());
                 });
             }
         },
