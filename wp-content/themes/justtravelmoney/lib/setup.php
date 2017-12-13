@@ -233,12 +233,6 @@ function assets() {
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
-
-  wp_enqueue_script('modernizr', Assets\asset_path('scripts/modernizr.js'), null, null, true);
-
-  wp_enqueue_script('loading-bar', Assets\asset_path('scripts/loading-bar.js'), null, null, true);
-  
-  wp_enqueue_script('slidebars', Assets\asset_path('scripts/slidebars.js'), null, null, true);
   
   wp_enqueue_script( 'jquery-ui-autocomplete' );
 
