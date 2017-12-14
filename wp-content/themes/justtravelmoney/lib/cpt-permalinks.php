@@ -12,7 +12,7 @@ function wdc_remove_cpt_slug( $post_link, $post, $leavename ) {
  
     return $post_link;
 }
-add_filter( 'post_type_link', 'wdc_remove_cpt_slug', 10, 3 );
+// add_filter( 'post_type_link', 'wdc_remove_cpt_slug', 10, 3 );
 
 
 /**
