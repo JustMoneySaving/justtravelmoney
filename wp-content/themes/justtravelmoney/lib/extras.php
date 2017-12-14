@@ -43,3 +43,13 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
+/**
+ * Prevent Yoast from overwriting Schema
+ * @param  $array $data Schema input data
+ * @return array        Modified schema array
+ */
+function bybe_remove_yoast_json($data){
+  $data = array();
+  return $data;
+}
+add_filter( 'wpseo_json_ld_output', 'bybe_remove_yoast_json', 10, 1 );
