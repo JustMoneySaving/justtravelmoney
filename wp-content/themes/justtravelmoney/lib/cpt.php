@@ -108,8 +108,8 @@ function wdc_provider_init() {
        'can_export' => true,
        'supports' => array('title', 'editor', 'thumbnail'),
        'rewrite' =>  array( 
-			'slug' => 'travel-money-providers', 
-			'with_front' => true,
+			'slug' => 'providers', 
+			'with_front' => false,
 			),
        'capability_type' => 'post'
    );
@@ -196,7 +196,7 @@ function wdc_currency_guides_init() {
        'supports' => array('title', 'thumbnail'),
        'rewrite' =>  array( 
             'slug' => 'currency-guides', 
-            'with_front' => true,
+            'with_front' => false,
         ),
        'capability_type' => 'post'
    );
