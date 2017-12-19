@@ -19,7 +19,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     $primary_domain = $_SERVER['HTTP_HOST'];
   }
 
-/*
+
   if ($_SERVER['HTTP_HOST'] != $primary_domain
       || !isset($_SERVER['HTTP_X_SSL'])
       || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
@@ -33,7 +33,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     header('Location: https://'. $primary_domain . $_SERVER['REQUEST_URI']);
     exit();
   }
-*/
+
 }
 
 /**
