@@ -76,7 +76,7 @@ function wdc_conversion_box_shortcode( $atts ) {
 
             <div class="form-group">
                 <label>'.$label2.'</label>
-                <input type="text" name="currency" '.$currency_select_id.' autocomplete="off" />
+                <input type="text" name="currency" '.$currency_select_id.' autocomplete="off" id="currency-select"/>
             </div>
 
             <div class="form-group">

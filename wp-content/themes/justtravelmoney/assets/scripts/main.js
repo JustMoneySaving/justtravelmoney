@@ -52,21 +52,41 @@
                         var progressBar = new ldBar("#progressBar");
                         progressBar.set(100);
                         setTimeout(function() {
-                            conversion_popup.fadeOut(200, function() {
-                                homepage_results.show();
-                                progressBar.set(0);
-                                $('#progressBar').removeClass('ldBar').empty();
+                            var data = {
+                                'action'  : 'exchange',
+                                'currency': $('#currency-select').val(),
+                                'value'   : $('#currency-amount').val()
+                            };
+                            jQuery.post(wdc.ajax_url, data, function(response) {
+                                homepage_results.replaceWith(response);
 
-                                //Scroll results into view
-                                if (ww >= 768) {
-                                    $('[canvas=container]').animate({
-                                        scrollTop: $('#scrollAnchor').offset().top - 90
-                                    }, 800);
-                                }
+                                conversion_popup.fadeOut(200, function() {
+                                    // Recache the results from the DOM
+                                    homepage_results = $('#homepage-results');
+                                    homepage_results.show();
+                                    progressBar.set(0);
+                                    $('#progressBar').removeClass('ldBar').empty();
+                                    //Scroll results into view
+                                    if (ww >= 768) {
+                                        $('[canvas=container]').animate({
+                                            scrollTop: $('#scrollAnchor').offset().top - 90
+                                        }, 800);
+                                    }
+                                });
                             });
-                        }, 2000);
+                        }, 2500);
                     });
                 });
+
+                if ( $('#homepage-results').hasClass('results-loaded') ) {
+                    $('#homepage-results').show();
+                    var ww = $(window).width();
+                    if (ww >= 768) {
+                        $('[canvas=container]').animate({
+                            scrollTop: $('#scrollAnchor').offset().top - 90
+                        }, 800);
+                    }
+                }
 
                 // AUTOCOMPLETE
 
@@ -147,6 +167,21 @@
 
             // Fire common finalize JS
             UTIL.fire('common', 'finalize');
+        }
+    };
+
+    // JustTravelMoney functions
+    var JTM = {
+        rates: {},
+        getRates: function() {
+            var data = {
+                'action': 'get_currencies',
+                'update': true
+            };
+
+            jQuery.post(ajaxurl, data, function(response) {
+                JTM.rates = response;
+            });
         }
     };
 

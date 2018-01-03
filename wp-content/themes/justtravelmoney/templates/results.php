@@ -1,283 +1,92 @@
-<?php 
+<?php
 $id_attr = '';
 $additional_class = 'results-single';
-$header_title = __('Best Rate Travel Money', 'sage');
-$best_title = __('Best Travel Money Rate!', 'sage');
-$other_title = __('Other Travel Money Rates', 'sage');
+$header_title = __( 'Best Rate Travel Money', 'sage' );
+$best_title = __( 'Best Travel Money Rate!', 'sage' );
+$other_title = __( 'Other Travel Money Rates', 'sage' );
 
-if(is_page_template( 'template-homepage.php' )){
-    $id_attr = 'id="homepage-results"';
-    $additional_class = '';
+if ( is_page_template( 'template-homepage.php' ) || wp_doing_ajax() ) {
+	$id_attr = 'id="homepage-results"';
+	$additional_class = '';
+	if ( isset( $_GET['currency-amount'] ) && isset( $_GET['currency'] ) ) {
+		$additional_class .= ' results-loaded';
+		$feeds = new \jtm\Currencies();
+		$currency = $_GET['currency'];
+		$value = $_GET['currency-amount'];
+		$exchange_results = $feeds->exchange( $currency, $value );
+		$currency_array = \Roots\Sage\Setup\jtm_get_currency_array();
+		$currency_record = array_search( $currency, array_column( $currency_array, 'value' ), true );
+		$currency_name = $currency_array[ $currency_record ]['plural'];
+	}
 };
-if(is_singular('currency-guides')){
-    $currenct_name = rwmb_meta( 'WDC_currenct_name' );
-    $header_title = 'Compare '.$currenct_name.' Exchange Rates';
-    $best_title = 'Best '.$currenct_name.' Exchange Rate!';
-    $other_title = 'Other '.$currenct_name.' Exchange Rates';
+if ( is_singular( 'currency-guides' ) ) {
+	$currenct_name = rwmb_meta( 'WDC_currenct_name' );
+	$header_title = 'Compare ' . $currenct_name . ' Exchange Rates';
+	$best_title = 'Best ' . $currenct_name . ' Exchange Rate!';
+	$other_title = 'Other ' . $currenct_name . ' Exchange Rates';
+
+	$feeds = new \jtm\Currencies();
+	$currency = rwmb_meta( 'WDC_currency_symbol' );
+	$value = 500;
+	if ( ! $currency ) {
+		$exchange_results = null;
+	} else {
+		$exchange_results = $feeds->exchange( $currency, $value );
+		$currency_array = \Roots\Sage\Setup\jtm_get_currency_array();
+		$currency_record = array_search( $currency, array_column( $currency_array, 'value' ), true );
+		$currency_name = $currency_array[ $currency_record ]['plural'];
+	}
 }
+
+$num_results = count( $exchange_results );
+
+// Get data for best option
+$line_data = null !== $exchange_results ? array_shift( $exchange_results ) : null;
+
 ?>
 
-<section class="homepage-section result-section <?php echo $additional_class;?>" <?php echo $id_attr;?>>
-    <div class="container">
-        <div class="exchange-results">
-            <header class="main-header">
-                <div class="header-square">
-                    <div class="square-inner">
-                        <span class="number">10</span>
-                        <?php _e('Rates Found', 'sage');?>
-                        <span class="completeness">100% <?php _e('Complete', 'sage');?></span>
-                    </div>
-                </div>
-                <div class="header-content">
-                    <h2><?php echo $header_title;?></h2>
-                    <p>We’ve compared the rates of <strong>British Pounds (GBP)</strong> to <strong>Dollars (USD)</strong><br>
-                    At the best rate, <strong>500 Pounds</strong> buys you <strong>212 USD</strong> from <strong>Travelex</strong></p>
-                </div>
-            </header>
+<section class="homepage-section result-section <?php echo esc_attr( $additional_class ); ?>" <?php echo $id_attr; ?>>
+	<div class="container">
+		<div class="exchange-results">
+			<header class="main-header">
+				<div class="header-square">
+					<div class="square-inner">
+						<span class="number"><?php echo esc_html( $num_results ); ?></span>
+						<?php _e( 'Rates Found', 'sage' ); ?>
+						<span class="completeness">100% <?php _e( 'Complete', 'sage' ); ?></span>
+					</div>
+				</div>
+				<div class="header-content">
+					<h2><?php echo $header_title; ?></h2>
+					<p>We’ve compared the rates of <strong>British Pounds (GBP)</strong> to <strong><?php echo $currency_name; ?> (<?php echo $currency; ?>)</strong><br>
+					At the best rate, <strong><?php echo $value; ?> Pounds</strong> buys you <strong><?php echo esc_attr( $line_data['you_get'] ); ?> <?php echo $currency; ?></strong> from <strong><?php echo esc_attr( $line_data['name'] ); ?></strong></p>
+				</div>
+			</header>
 
-            <h2 class="best"><?php echo $best_title;?></h2>
-            <?php /**
-             * Result box needs to have "best" or "other" class
-             */
-            ?>
-            <div class="result-box best">
-                <div class="provider-image">
-                    <a href="#">
-                        <img src="http://placehold.it/160x120/" alt="alt">
-                    </a>
-                </div> <!-- provider-image -->
+			<h2 class="best"><?php echo $best_title; ?></h2>
+			<?php
+			/**
+			 * Result box needs to have "best" or "other" class
+			 */
 
-                <div class="result-content">
-                    <div class="title">
-                        <h3><a href="#">Travelex</a></h3>
-                        <p><?php _e('Quick, get this best available rate', 'sage');?></p>
-                    </div>
+			$line_class = 'best';
+			include( locate_template( array( 'templates/results-line.php' ) ) );
+			?>
 
-                    <div class="result-info">
-                            <div class="amount">
-                                <div class="vm">
-                                    You Get <span>209 USD</span>
-                                </div>
-                            </div>
-                            <div class="rate">
-                                <div class="vm">
-                                    Exchange Rate <span>1.1056</span>
-                                </div>
-                            </div>
-                            <div class="delivery">
-                                <div class="vm">
-                                    Delivery <span>FREE</span>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="btn-holder">
-                        <div class="inner">
-                            <div class="vm">
-                                <a href="#" class="btn"><?php _e('Visit & Exchange!', 'sage');?></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- result-content -->
-            </div><!-- result-box other -->
+			<?php get_template_part( 'templates/sponsored', 'provider' ); ?>
 
-            <?php get_template_part('templates/sponsored', 'provider');?>
+			<?php if ( count( $exchange_results ) > 1 ) { ?>
 
-            <h2 class="other"><?php echo $other_title;?></h2>
+			<h2 class="other"><?php echo $other_title; ?></h2>
 
-            <div class="result-box other">
-                <div class="provider-image">
-                    <a href="#">
-                        <img src="http://placehold.it/160x120/" alt="alt">
-                    </a>
-                </div> <!-- provider-image -->
+			<?php
+			$line_class = 'other';
+			foreach ( $exchange_results as $line_data ) {
+				include( locate_template( array( 'templates/results-line.php' ) ) );
+			}
+			?>
 
-                <div class="result-content">
-                    <div class="title">
-                        <h3><a href="#">Post Office Money</a></h3>
-                    </div>
-
-                    <div class="result-info">
-                            <div class="amount">
-                                <div class="vm">
-                                    <?php _e('You Get', 'sage');?> <span>209 USD</span>
-                                </div>
-                            </div>
-                            <div class="rate">
-                                <div class="vm">
-                                    <?php _e('The Rate', 'sage');?> <span>1.1056</span>
-                                </div>
-                            </div>
-                            <div class="delivery">
-                                <div class="vm">
-                                    <?php _e('Delivery', 'sage');?> <span>FREE</span>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="btn-holder">
-                        <div class="inner">
-                            <div class="vm">
-                                <a href="#" class="btn"><?php _e('Visit Anyway', 'sage');?></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- result-content -->
-            </div><!-- result-box other -->
-
-            <div class="result-box other">
-                <div class="provider-image">
-                    <a href="#">
-                        <img src="http://placehold.it/160x120/" alt="alt">
-                    </a>
-                </div> <!-- provider-image -->
-
-                <div class="result-content">
-                    <div class="title">
-                        <h3><a href="#">Post Office Money</a></h3>
-                    </div>
-
-                    <div class="result-info">
-                            <div class="amount">
-                                <div class="vm">
-                                    <?php _e('You Get', 'sage');?> <span>209 USD</span>
-                                </div>
-                            </div>
-                            <div class="rate">
-                                <div class="vm">
-                                    <?php _e('The Rate', 'sage');?> <span>1.1056</span>
-                                </div>
-                            </div>
-                            <div class="delivery">
-                                <div class="vm">
-                                    <?php _e('Delivery', 'sage');?> <span>FREE</span>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="btn-holder">
-                        <div class="inner">
-                            <div class="vm">
-                                <a href="#" class="btn"><?php _e('Visit Anyway', 'sage');?></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- result-content -->
-            </div><!-- result-box other -->
-
-            <div class="result-box other">
-                <div class="provider-image">
-                    <a href="#">
-                        <img src="http://placehold.it/160x120/" alt="alt">
-                    </a>
-                </div> <!-- provider-image -->
-
-                <div class="result-content">
-                    <div class="title">
-                        <h3><a href="#">Post Office Money</a></h3>
-                    </div>
-
-                    <div class="result-info">
-                            <div class="amount">
-                                <div class="vm">
-                                    <?php _e('You Get', 'sage');?> <span>209 USD</span>
-                                </div>
-                            </div>
-                            <div class="rate">
-                                <div class="vm">
-                                    <?php _e('The Rate', 'sage');?> <span>1.1056</span>
-                                </div>
-                            </div>
-                            <div class="delivery">
-                                <div class="vm">
-                                    <?php _e('Delivery', 'sage');?> <span>FREE</span>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="btn-holder">
-                        <div class="inner">
-                            <div class="vm">
-                                <a href="#" class="btn"><?php _e('Visit Anyway', 'sage');?></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- result-content -->
-            </div><!-- result-box other -->
-
-            <div class="result-box other">
-                <div class="provider-image">
-                    <a href="#">
-                        <img src="http://placehold.it/160x120/" alt="alt">
-                    </a>
-                </div> <!-- provider-image -->
-
-                <div class="result-content">
-                    <div class="title">
-                        <h3><a href="#">Post Office Money</a></h3>
-                    </div>
-
-                    <div class="result-info">
-                            <div class="amount">
-                                <div class="vm">
-                                    <?php _e('You Get', 'sage');?> <span>209 USD</span>
-                                </div>
-                            </div>
-                            <div class="rate">
-                                <div class="vm">
-                                    <?php _e('The Rate', 'sage');?> <span>1.1056</span>
-                                </div>
-                            </div>
-                            <div class="delivery">
-                                <div class="vm">
-                                    <?php _e('Delivery', 'sage');?> <span>FREE</span>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="btn-holder">
-                        <div class="inner">
-                            <div class="vm">
-                                <a href="#" class="btn"><?php _e('Visit Anyway', 'sage');?></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- result-content -->
-            </div><!-- result-box other -->
-
-            <div class="result-box other">
-                <div class="provider-image">
-                    <a href="#">
-                        <img src="http://placehold.it/160x120/" alt="alt">
-                    </a>
-                </div> <!-- provider-image -->
-
-                <div class="result-content">
-                    <div class="title">
-                        <h3><a href="#">Post Office Money</a></h3>
-                    </div>
-
-                    <div class="result-info">
-                            <div class="amount">
-                                <div class="vm">
-                                    <?php _e('You Get', 'sage');?> <span>209 USD</span>
-                                </div>
-                            </div>
-                            <div class="rate">
-                                <div class="vm">
-                                    <?php _e('The Rate', 'sage');?> <span>1.1056</span>
-                                </div>
-                            </div>
-                            <div class="delivery">
-                                <div class="vm">
-                                    <?php _e('Delivery', 'sage');?> <span>FREE</span>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="btn-holder">
-                        <div class="inner">
-                            <div class="vm">
-                                <a href="#" class="btn"><?php _e('Visit Anyway', 'sage');?></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- result-content -->
-            </div><!-- result-box other -->
-        </div>
-    </div>
+			<?php } ?>
+		</div>
+	</div>
 </section>

@@ -11,6 +11,11 @@
             ],
             "main": true
         },
+        "ajax.js": {
+            "files": [
+                "scripts/ajax.js"
+            ]
+        },
         "main.css": {
             "files": [
                 "styles/main.scss"
