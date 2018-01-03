@@ -121,7 +121,7 @@ if ( ! class_exists( __NAMESPACE__ . '/Currencies' ) ) {
 				$results[ $id ] = array(
 					'logo'     => $provider_logo_url,
 					'name'     => get_the_title( $id ),
-					'you_get'  => $value * $rate['rate'],
+					'you_get'  => round( $value * $rate['rate'], 2 ),
 					'rate'     => $rate['rate'],
 					'delivery' => 'FREE',
 					'url'      => rwmb_meta( 'WDC_about_provider_affiliate_url', null, $id ) ?: rwmb_meta( 'WDC_about_provider_url', null, $id ),

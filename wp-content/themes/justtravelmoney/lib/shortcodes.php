@@ -71,7 +71,7 @@ function wdc_conversion_box_shortcode( $atts ) {
     $html .= '<form '.$actions.' class="'.$class.'">
             <div class="form-group">
                 <label for="currency-amount">'.$label1.'</label>
-                <input type="text" id="currency-amount" name="currency-amount" placeholder="'.__('e.g £500.00', 'sage').'" />
+                <input type="number" id="currency-amount" name="currency-amount" placeholder="'.__('e.g £500.00', 'sage').'" />
             </div>
 
             <div class="form-group">
