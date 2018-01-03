@@ -75,7 +75,7 @@ $line_data = null !== $exchange_results ? array_shift( $exchange_results ) : nul
 
 			<?php get_template_part( 'templates/sponsored', 'provider' ); ?>
 
-			<?php if ( count( $exchange_results ) > 1 ) { ?>
+			<?php if ( count( $exchange_results ) >= 1 ) { ?>
 
 			<h2 class="other"><?php echo $other_title; ?></h2>
 
