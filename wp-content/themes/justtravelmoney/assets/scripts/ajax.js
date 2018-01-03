@@ -8,7 +8,7 @@
 
 		var data = {
 			'action' : 'update_currencies',
-			'refresh': 'false'
+			'refresh': 'true'
 		};
 
 		$trigger_container.html('<em>Updating...</em>');
