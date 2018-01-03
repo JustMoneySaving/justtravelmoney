@@ -6,8 +6,8 @@ add_filter( 'rwmb_meta_boxes', 'WDC_register_meta_boxes' );
  *
  * @return void
  */
-function WDC_register_meta_boxes( $meta_boxes ){
-	
+function WDC_register_meta_boxes( $meta_boxes ) {
+
 $prefix = 'WDC_';
 
 // HERO
@@ -88,7 +88,7 @@ $meta_boxes[] = array(
 	'fields' => array(
         array(
             'name'  => 'Provider Logo',
-            'id'    => "{$prefix}provider_logo",					
+            'id'    => "{$prefix}provider_logo",
             'desc'  => '',
             'type'  => 'image_advanced',
             'max_file_uploads' => 1,
@@ -164,6 +164,19 @@ $meta_boxes[] = array(
 			'desc'  => 'must contain http:// or https://',
 			'type'  => 'text',
 		),
+
+		array(
+			'name'  => 'Affiliate URL',
+			'id'    => "{$prefix}about_provider_affiliate_url",
+			'desc'  => 'must contain http:// or https://',
+			'type'  => 'text',
+		),
+
+		array(
+			'name'  => 'Provider USP',
+			'id'    => "{$prefix}about_provider_usp",
+			'type'  => 'text',
+		),
 	),
 );
 
@@ -206,6 +219,19 @@ $meta_boxes[] = array(
 	),
 );
 
+// Currency Feed URL
+$meta_boxes[] = array(
+	'title' => 'Currency Feed URL',
+	'pages' => array( 'providers' ),
+	'fields' => array(
+		array(
+			'name' => __( 'Currency Feed URL', 'jtm' ),
+			'id'   => "{$prefix}feed_url",
+			'desc'  => 'Must contain http:// or https://',
+			'type' => 'text'
+		),
+	),
+);
 
 // OFFERS
 $meta_boxes[] = array(
@@ -292,6 +318,14 @@ $meta_boxes[] = array(
 			'name'  => 'Currency Name',
 			'id'    => "{$prefix}currenct_name",
 			'desc'  => 'this will appear in title sections',
+			'type'  => 'text',
+			'std'   =>  '',
+		),
+
+		array(
+			'name'  => 'Currency Symbol',
+			'id'    => "{$prefix}currency_symbol",
+			'desc'  => 'The 3-letter abbreviation for the currency',
 			'type'  => 'text',
 			'std'   =>  '',
 		),
@@ -402,4 +436,4 @@ $meta_boxes[] = array(
 
 
 return $meta_boxes;
-}?>
+}
