@@ -12,6 +12,8 @@ if ( ! class_exists( __NAMESPACE__ . '/Currencies' ) ) {
 
 		public function __construct( $refresh = false ) {
 			$this->currencies = $this->get_feeds( $this->get_urls( $refresh ), $refresh );
+
+			var_dump( $this->provider( 342 ) ); die;
 		}
 
 		private function get_feeds( $feed_urls = null, $refresh_cache = false ) {
@@ -135,6 +137,22 @@ if ( ! class_exists( __NAMESPACE__ . '/Currencies' ) ) {
 			}
 
 			return $results;
+		}
+
+		public function provider( $provider = null ) {
+			if ( null === $provider || ! is_integer( $provider ) ) {
+				return false;
+			}
+
+			$provider_rates = array();
+
+			foreach ( $this->currencies as $currency=>$providers ) {
+				if ( isset( $providers[ $provider ] ) ) {
+					$provider_rates[ $currency ] = $providers[ $provider ]['rate'];
+				}
+			}
+
+			var_dump( $provider_rates ); die;
 		}
 	}
 }
