@@ -34,7 +34,7 @@ if ( ! class_exists( __NAMESPACE__ . '/Ajax' ) ) {
 				$exchange_results = $feeds->exchange( $currency, $value );
 				$currency_array = \Roots\Sage\Setup\jtm_get_currency_array();
 				$currency_record = array_search( $currency, array_column( $currency_array, 'value' ), true );
-				$currency_name = $currency_array[ $currency_record ]['plural'];
+				$currency_name = $currency_array[ $currency_record ]->plural;
 				include( locate_template( array( 'templates/results.php' ) ) );
 			} else {
 				return false;

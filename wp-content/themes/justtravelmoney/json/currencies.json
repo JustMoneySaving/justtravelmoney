@@ -1,0 +1,1122 @@
+[
+ {
+   "label": "Afghanistan - Afghan Afghani (AFN)",
+   "currency_name": "Afghan Afghani",
+   "plural": "Afghan Afghani",
+   "value": "AFN",
+   "icon": "af"
+ },
+ {
+   "label": "Albania - Albanian Lek (ALL)",
+   "currency_name": "Albanian Lek",
+   "plural": "Albanian Lek",
+   "value": "ALL",
+   "icon": "al"
+ },
+ {
+   "label": "Algeria - Algerian Dinar (DZD)",
+   "currency_name": "Algerian Dinar",
+   "plural": "Algerian Dinars",
+   "value": "DZD",
+   "icon": "dz"
+ },
+ {
+   "label": "Angola - Angolan Kwanza (AOA)",
+   "currency_name": "Angolan Kwanza",
+   "plural": "Angolan Kwanza",
+   "value": "AOA",
+   "icon": "ao"
+ },
+ {
+   "label": "Angentina - Argentine Peso (ARS)",
+   "currency_name": "Argentine Peso",
+   "plural": "Argentine Pesos",
+   "value": "ARS",
+   "icon": "ar"
+ },
+ {
+   "label": "Armenia - Armenian Dram (AMD)",
+   "currency_name": "Armenian Dram",
+   "plural": "Armenian Dram",
+   "value": "AMD",
+   "icon": "am"
+ },
+ {
+   "label": "Aruba - Aruban Florin (AWG)",
+   "currency_name": "Aruban Florin",
+   "plural": "Aruban Florin",
+   "value": "AWG",
+   "icon": "aw"
+ },
+ {
+   "label": "Australia - Australian Dollar (AUD)",
+   "currency_name": "Australian Dollar",
+   "plural": "Australian Dollars",
+   "value": "AUD",
+   "icon": "au"
+ },
+ {
+   "label": "Austria - European Euro (EUR)",
+   "currency_name": "European Euro",
+   "plural": "European Euros",
+   "value": "EUR",
+   "icon": "at"
+ },
+ {
+   "label": "Azerbaijan - Azerbaijan Manat (AZN)",
+   "currency_name": "Azerbaijan Manat",
+   "plural": "Azerbaijan Manat",
+   "value": "AZN",
+   "icon": "az"
+ },
+ {
+   "label": "Bahamas - Bahamian Dollar (BSD)",
+   "currency_name": "Bahamian Dollar",
+   "plural": "Bahamian Dollars",
+   "value": "BSD",
+   "icon": "bs"
+ },
+ {
+   "label": "Bahrain - Bahraini Dinar (BHD)",
+   "currency_name": "Bahraini Dinar",
+   "plural": "Bahraini Dinars",
+   "value": "BHD",
+   "icon": "bh"
+ },
+ {
+   "label": "Bangladesh - Bangladeshi Taka (BDT)",
+   "currency_name": "Bangladeshi Taka",
+   "plural": "Bangladeshi Taka",
+   "value": "BDT",
+   "icon": "bd"
+ },
+ {
+   "label": "Barbados - Barbadian Dollar (BBD)",
+   "currency_name": "Barbadian Dollar",
+   "plural": "Barbadian Dollars",
+   "value": "BBD",
+   "icon": "bb"
+ },
+ {
+   "label": "Belarus - Belarusian Ruble (BYN)",
+   "currency_name": "Belarusian Ruble",
+   "plural": "Belarusian Rubles",
+   "value": "BYN",
+   "icon": "by"
+ },
+ {
+   "label": "Belize - Belize Dollar (BZD)",
+   "currency_name": "Belize Dollar",
+   "plural": "Belize Dollars",
+   "value": "BZD",
+   "icon": "bz"
+ },
+ {
+   "label": "Bermuda - Bermudian Dollar (BMD)",
+   "currency_name": "Bermudian Dollar",
+   "plural": "Bermudian Dollars",
+   "value": "BMD",
+   "icon": "bm"
+ },
+ {
+   "label": "Bhutan - Bhutanese Ngultrum (BTN)",
+   "currency_name": "Bhutanese Ngultrum",
+   "plural": "Bhutanese Ngultrum",
+   "value": "BTN",
+   "icon": "bt"
+ },
+ {
+   "label": "Bolivia - Bolivian Boliviano (BOB)",
+   "currency_name": "Bolivian Boliviano",
+   "plural": "Bolivian Boliviano",
+   "value": "BOB",
+   "icon": "bo"
+ },
+ {
+   "label": "Bosnia and Herzegovina Convertible Mark (BAM)",
+   "currency_name": "Bosnia and Herzegovina Convertible Mark",
+   "plural": "Bosnia and Herzegovina Convertible Mark",
+   "value": "BAM",
+   "icon": "ba"
+ },
+ {
+   "label": "Botswana - Botswana Pula (BWP)",
+   "currency_name": "Botswana Pula",
+   "plural": "Botswana Pula",
+   "value": "BWP",
+   "icon": "bw"
+ },
+ {
+   "label": "Brazil - Brazilian Real (BRL)",
+   "currency_name": "Brazilian Real",
+   "plural": "Brazilian Reais",
+   "value": "BRL",
+   "icon": "br"
+ },
+ {
+   "label": "Brunei - Brunei Dollar (BND)",
+   "currency_name": "Brunei Dollar",
+   "plural": "Brunei Dollars",
+   "value": "BND",
+   "icon": "bn"
+ },
+ {
+   "label": "Bulgaria - Bulgarian Lev (BGN)",
+   "currency_name": "Bulgarian lev",
+   "plural": "Bulgarian leva",
+   "value": "BGN",
+   "icon": "bg"
+ },
+ {
+   "label": "Burundi - Burundi Franc (BIF)",
+   "currency_name": "Burundi Franc",
+   "plural": "Burundi Francs",
+   "value": "BIF",
+   "icon": "bi"
+ },
+ {
+   "label": "Cambodia - Cambodian Riel (KHR)",
+   "currency_name": "Cambodian Riel",
+   "plural": "Cambodian Riels",
+   "value": "KHR",
+   "icon": "kh"
+ },
+ {
+   "label": "Canada - Canadian Dollar (CAD)",
+   "currency_name": "Canadian Dollar",
+   "plural": "Canadian Dollars",
+   "value": "CAD",
+   "icon": "ca"
+ },
+ {
+   "label": "Cape Verde - Cape Verdean Escudo (CVE)",
+   "currency_name": "Cape Verdean Escudo",
+   "plural": "Cape Verdean Escudo",
+   "value": "CVE",
+   "icon": "cv"
+ },
+ {
+   "label": "Cayman Islands - Cayman Islands Dollar (KYD)",
+   "currency_name": "Cayman Islands Dollar",
+   "plural": "Cayman Islands Dollars",
+   "value": "KYD",
+   "icon": "ky"
+ },
+ {
+   "label": "Central Africa - Central African CFA Franc (XAF)",
+   "currency_name": "Central African CFA Franc",
+   "plural": "Central African CFA Francs",
+   "value": "XAF",
+   "icon": "cf"
+ },
+ {
+   "label": "CFP Franc (XPF)",
+   "currency_name": "CFP Franc",
+   "plural": "CFP Francs",
+   "value": "XPF",
+   "icon": ""
+ },
+ {
+   "label": "Chile - Chilean Peso (CLP)",
+   "currency_name": "Chilean Peso",
+   "plural": "Chilean Pesos",
+   "value": "CLP",
+   "icon": "cl"
+ },
+ {
+   "label": "China - Chinese Yuan Renminbi (CNY)",
+   "currency_name": "Chinese Yuan Renminbi",
+   "plural": "Chinese Yuan Renminbi",
+   "value": "CNY",
+   "icon": "cn"
+ },
+ {
+   "label": "Colombia - Colombian Peso (COP)",
+   "currency_name": "Colombian Peso",
+   "plural": "Colombian Pesos",
+   "value": "COP",
+   "icon": "co"
+ },
+ {
+   "label": "Comoros - Comorian Franc (KMF)",
+   "currency_name": "Comorian Franc",
+   "plural": "Comorian Francs",
+   "value": "KMF",
+   "icon": "km"
+ },
+ {
+   "label": "Congo - Congolese Franc (CDF)",
+   "currency_name": "Congolese Franc",
+   "plural": "Congolese Francs",
+   "value": "CDF",
+   "icon": "cd"
+ },
+ {
+   "label": "Cook Islands - Cook Islands Dollar",
+   "currency_name": "Cook Islands Dollar",
+   "plural": "Cook Islands Dollars",
+   "value": "none",
+   "icon": "ck"
+ },
+ {
+   "label": "Costa Rica - Costa Rican Colon (CRC)",
+   "currency_name": "Costa Rican Colon",
+   "plural": "Costa Rican Colon",
+   "value": "CRC",
+   "icon": "cr"
+ },
+ {
+   "label": "Croatia - Croatian Kuna (HRK)",
+   "currency_name": "Croatian Kuna",
+   "plural": "Croatian Kuna",
+   "value": "HRK",
+   "icon": "hr"
+ },
+ {
+   "label": "Cuba - Cuban Peso (CUP)",
+   "currency_name": "Cuban Peso",
+   "plural": "Cuban Pesos",
+   "value": "CUP",
+   "icon": "cu"
+ },
+ {
+   "label": "Czech Republic - Czech Koruna (CZK)",
+   "currency_name": "Czech Koruna",
+   "plural": "Czech Koruna",
+   "value": "CZK",
+   "icon": "cz"
+ },
+ {
+   "label": "Denmark - Danish Krone (DKK)",
+   "currency_name": "Danish Krone",
+   "plural": "Danish Kroner",
+   "value": "DKK",
+   "icon": "dk"
+ },
+ {
+   "label": "Djibouti - Djiboutian Franc (DJF)",
+   "currency_name": "Djiboutian Franc",
+   "plural": "Djiboutian Francs",
+   "value": "DJF",
+   "icon": "dj"
+ },
+ {
+   "label": "Dominican Republic - Dominican Peso (DOP)",
+   "currency_name": "Dominican Peso",
+   "plural": "Dominican Pesos",
+   "value": "DOP",
+   "icon": "do"
+ },
+ {
+   "label": "East Caribbean Dollar (XCD)",
+   "currency_name": "East Caribbean Dollar",
+   "plural": "East Caribbean Dollars",
+   "value": "XCD",
+   "icon": ""
+ },
+ {
+   "label": "Egypt - Egyptian Pound (EGP)",
+   "currency_name": "Egyptian Pound",
+   "plural": "Egyptian Pounds",
+   "value": "EGP",
+   "icon": "eg"
+ },
+ {
+   "label": "Eritrea - Eritrean Nakfa (ERN)",
+   "currency_name": "Eritrean Nakfa",
+   "plural": "Eritrean Nakfa",
+   "value": "ERN",
+   "icon": "er"
+ },
+ {
+   "label": "Ethiopia - Ethiopian Birr (ETB)",
+   "currency_name": "Ethiopian Birr",
+   "plural": "Ethiopian Birr",
+   "value": "ETB",
+   "icon": "et"
+ },
+ {
+   "label": "Europe - European Euro (EUR)",
+   "currency_name": "European Euro",
+   "plural": "European Euros",
+   "value": "EUR",
+   "icon": "eu"
+ },
+ {
+   "label": "Falkland Islands - Falkland Islands Pound (FKP)",
+   "currency_name": "Falkland Islands Pound",
+   "plural": "Falkland Islands Pounds",
+   "value": "FKP",
+   "icon": "fk"
+ },
+ {
+   "label": "Fiji - Fijian Dollar (FJD)",
+   "currency_name": "Fijian Dollar",
+   "plural": "Fijian Dollars",
+   "value": "FJD",
+   "icon": "fj"
+ },
+ {
+   "label": "France - European Euro (EUR)",
+   "currency_name": "European Euro",
+   "plural": "European Euros",
+   "value": "EUR",
+   "icon": "fr"
+ },
+ {
+   "label": "Gambia - Gambian Dalasi (GMD)",
+   "currency_name": "Gambian Dalasi",
+   "plural": "Gambian Dalasis",
+   "value": "GMD",
+   "icon": "gm"
+ },
+ {
+   "label": "Georgia - Georgian Lari (GEL)",
+   "currency_name": "Georgian Lari",
+   "plural": "Georgian Lari",
+   "value": "GEL",
+   "icon": "ge"
+ },
+ {
+   "label": "Ghana - Ghanaian Cedi (GHS)",
+   "currency_name": "Ghanaian Cedi",
+   "plural": "Ghanaian Cedi",
+   "value": "GHS",
+   "icon": "gh"
+ },
+ {
+   "label": "Gibraltar - Gibraltar Pound (GIP)",
+   "currency_name": "Gibraltar Pound",
+   "plural": "Gibraltar Pounds",
+   "value": "GIP",
+   "icon": "gi"
+ },
+ {
+   "label": "Guatemala - Guatemalan Quetzal (GTQ)",
+   "currency_name": "Guatemalan Quetzal",
+   "plural": "Guatemalan Quetzal",
+   "value": "GTQ",
+   "icon": "gt"
+ },
+ {
+   "label": "Guernsey - Guernsey Pound (GGP)",
+   "currency_name": "Guernsey Pound",
+   "plural": "Guernsey Pounds",
+   "value": "GGP",
+   "icon": "gg"
+ },
+ {
+   "label": "Guinea - Guinean Franc (GNF)",
+   "currency_name": "Guinean Franc",
+   "plural": "Guinean Francs",
+   "value": "GNF",
+   "icon": "gn"
+ },
+ {
+   "label": "Guyana - Guyanese Dollar (GYD)",
+   "currency_name": "Guyanese Dollar",
+   "plural": "Guyanese Dollars",
+   "value": "GYD",
+   "icon": "gy"
+ },
+ {
+   "label": "Haiti - Haitian Gourde (HTG)",
+   "currency_name": "Haitian Gourde",
+   "plural": "Haitian Gourde",
+   "value": "HTG",
+   "icon": "ht"
+ },
+ {
+   "label": "Honduras - Honduran lempira (HNL)",
+   "currency_name": "Honduran Lempira",
+   "plural": "Honduran Lempira",
+   "value": "HNL",
+   "icon": "hn"
+ },
+ {
+   "label": "Hong Kong - Hong Kong Dollar (HKD)",
+   "currency_name": "Hong Kong Dollar",
+   "plural": "Hong Kong Dollars",
+   "value": "HKD",
+   "icon": "hk"
+ },
+ {
+   "label": "Hungary - Hungarian Forint (HUF)",
+   "currency_name": "Hungarian Forint",
+   "plural": "Hungarian Forint",
+   "value": "HUF",
+   "icon": "hu"
+ },
+ {
+   "label": "Iceland - Icelandic Krona (ISK)",
+   "currency_name": "Icelandic Krona",
+   "plural": "Icelandic Krónur",
+   "value": "ISK",
+   "icon": "is"
+ },
+ {
+   "label": "India - Indian Rupee (INR)",
+   "currency_name": "Indian Rupee",
+   "plural": "Indian Rupees",
+   "value": "INR",
+   "icon": "in"
+ },
+ {
+   "label": "Indonesia - Indonesian Rupiah (IDR)",
+   "currency_name": "Indonesian Rupiah",
+   "plural": "Indonesian Rupiah",
+   "value": "IDR",
+   "icon": "id"
+ },
+ {
+   "label": "Iran - Iranian Rial (IRR)",
+   "currency_name": "Iranian Rial",
+   "plural": "Iranian Rials",
+   "value": "IRR",
+   "icon": "ir"
+ },
+ {
+   "label": "Iraq - Iraqi Dinar (IQD)",
+   "currency_name": "Iraqi Dinar",
+   "plural": "Iraqi Dinars",
+   "value": "IQD",
+   "icon": "iq"
+ },
+ {
+   "label": "Israel - Israeli New Shekel (ILS)",
+   "currency_name": "Israeli New Shekel",
+   "plural": "Israeli New Shekel",
+   "value": "ILS",
+   "icon": "il"
+ },
+ {
+   "label": "Jamaica - Jamaican Dollar (JMD)",
+   "currency_name": "Jamaican Dollar",
+   "plural": "Jamaican Dollars",
+   "value": "JMD",
+   "icon": "jm"
+ },
+ {
+   "label": "Japan - Japanese Yen (JPY)",
+   "currency_name": "Japanese Yen",
+   "plural": "Japanese Yen",
+   "value": "JPY",
+   "icon": "jp"
+ },
+ {
+   "label": "Jersey - Jersey Pound (JEP)",
+   "currency_name": "Jersey Pound",
+   "plural": "Jersey Pounds",
+   "value": "JEP",
+   "icon": "je"
+ },
+ {
+   "label": "Jordan - Jordanian Dinar (JOD)",
+   "currency_name": "Jordanian Dinar",
+   "plural": "Jordanian Dinars",
+   "value": "JOD",
+   "icon": "jo"
+ },
+ {
+   "label": "Kazakhstan - Kazakhstani Tenge (KZT)",
+   "currency_name": "Kazakhstani Tenge",
+   "plural": "Kazakhstani Tenge",
+   "value": "KZT",
+   "icon": "kz"
+ },
+ {
+   "label": "Kenya - Kenyan Shilling (KES)",
+   "currency_name": "Kenyan Shilling",
+   "plural": "Kenyan Shillings",
+   "value": "KES",
+   "icon": "ke"
+ },
+ {
+   "label": "Kuwait - Kuwaiti Dinar (KWD)",
+   "currency_name": "Kuwaiti Dinar",
+   "plural": "Kuwaiti Dinars",
+   "value": "KWD",
+   "icon": "kw"
+ },
+ {
+   "label": "Kyrgyzstan - Kyrgyzstani Som (KGS)",
+   "currency_name": "Kyrgyzstani Som",
+   "plural": "Kyrgyzstani Som",
+   "value": "KGS",
+   "icon": "kg"
+ },
+ {
+   "label": "Lao - Lao Kip (LAK)",
+   "currency_name": "Lao Kip",
+   "plural": "Lao Kip",
+   "value": "LAK",
+   "icon": "la"
+ },
+ {
+   "label": "Lebanon - Lebanese Pound (LBP)",
+   "currency_name": "Lebanese Pound",
+   "plural": "Lebanese Pounds",
+   "value": "LBP",
+   "icon": "lb"
+ },
+ {
+   "label": "Lesotho - Lesotho Loti (LSL)",
+   "currency_name": "Lesotho Loti",
+   "plural": "Lesotho Loti",
+   "value": "LSL",
+   "icon": "ls"
+ },
+ {
+   "label": "Liberia - Liberian Dollar (LRD)",
+   "currency_name": "Liberian Dollar",
+   "plural": "Liberian Dollars",
+   "value": "LRD",
+   "icon": "lr"
+ },
+ {
+   "label": "Libya - Libyan Dinar (LYD)",
+   "currency_name": "Libyan Dinar",
+   "plural": "Libyan Dinars",
+   "value": "LYD",
+   "icon": "ly"
+ },
+ {
+   "label": "Macau - Macanese Pataca (MOP)",
+   "currency_name": "Macanese Pataca",
+   "plural": "Macanese Pataca",
+   "value": "MOP",
+   "icon": "mo"
+ },
+ {
+   "label": "Macedonia - Macedonian Denar (MKD)",
+   "currency_name": "Macedonian Denar",
+   "plural": "Macedonian Denari",
+   "value": "MKD",
+   "icon": ""
+ },
+ {
+   "label": "Madagascar - Malagasy Ariary (MGA)",
+   "currency_name": "Malagasy Ariary",
+   "plural": "Malagasy Ariary",
+   "value": "MGA",
+   "icon": "mg"
+ },
+ {
+   "label": "Malawi - Malawian Kwacha (MWK)",
+   "currency_name": "Malawian Kwacha",
+   "plural": "Malawian Kwacha",
+   "value": "MWK",
+   "icon": "mw"
+ },
+ {
+   "label": "Malaysia - Malaysian Ringgit (MYR)",
+   "currency_name": "Malaysian Ringgit",
+   "plural": "Malaysian Ringgit",
+   "value": "MYR",
+   "icon": "my"
+ },
+ {
+   "label": "Maldives - Maldivian Rufiyaa (MVR)",
+   "currency_name": "Maldivian Rufiyaa",
+   "plural": "Maldivian Rufiyaa",
+   "value": "MVR",
+   "icon": "mv"
+ },
+ {
+   "label": "Isle of Man - Manx Pound (IMP)",
+   "currency_name": "Manx Pound",
+   "plural": "Manx Pounds",
+   "value": "IMP",
+   "icon": "im"
+ },
+ {
+   "label": "Mauritania - Mauritanian Ouguiya (MRO)",
+   "currency_name": "Mauritanian Ouguiya",
+   "plural": "Mauritanian Ouguiya",
+   "value": "MRO",
+   "icon": "mr"
+ },
+ {
+   "label": "Mauritius - Mauritian Rupee (MUR)",
+   "currency_name": "Mauritian Rupee",
+   "plural": "Mauritian Rupees",
+   "value": "MUR",
+   "icon": "mu"
+ },
+ {
+   "label": "Mexico - Mexican Peso (MXN)",
+   "currency_name": "Mexican Peso",
+   "plural": "Mexican Pesos",
+   "value": "MXN",
+   "icon": "mx"
+ },
+ {
+   "label": "Moldova - Moldovan Leu (MDL)",
+   "currency_name": "Moldovan Leu",
+   "plural": "Moldovan Lei",
+   "value": "MDL",
+   "icon": "md"
+ },
+ {
+   "label": "Mongolia - Mongolian Tugrik (MNT)",
+   "currency_name": "Mongolian Tugrik",
+   "plural": "Mongolian Tugrik",
+   "value": "MNT",
+   "icon": "mn"
+ },
+ {
+   "label": "Morocco - Moroccan Dirham (MAD)",
+   "currency_name": "Moroccan Dirham",
+   "plural": "Moroccan Dirhams",
+   "value": "MAD",
+   "icon": "ma"
+ },
+ {
+   "label": "Mozambique - Mozambican Metical (MZN)",
+   "currency_name": "Mozambican Metical",
+   "plural": "Mozambican Metical",
+   "value": "MZN",
+   "icon": "mz"
+ },
+ {
+   "label": "Myanmar - Myanmar Kyat (MMK)",
+   "currency_name": "Myanmar Kyat",
+   "plural": "Myanmar Kyat",
+   "value": "MMK",
+   "icon": "mm"
+ },
+ {
+   "label": "Namibia - Namibian Dollar (NAD)",
+   "currency_name": "Namibian Dollar",
+   "plural": "Namibian Dollars",
+   "value": "NAD",
+   "icon": "na"
+ },
+ {
+   "label": "Nepal - Nepalese Rupee (NPR)",
+   "currency_name": "Nepalese Rupee",
+   "plural": "Nepalese Rupees",
+   "value": "NPR",
+   "icon": "np"
+ },
+ {
+   "label": "Netherlands - Netherlands Antillean Guilder",
+   "currency_name": "Netherlands Antillean Guilder",
+   "plural": "Netherlands Antillean Guilder",
+   "value": "ANG",
+   "icon": "nl"
+ },
+ {
+   "label": "Taiwan - New Taiwan Dollar (TWD)",
+   "currency_name": "New Taiwan Dollar",
+   "plural": "New Taiwan Dollars",
+   "value": "TWD",
+   "icon": "tw"
+ },
+ {
+   "label": "New Zealand - New Zealand Dollar (NZD)",
+   "currency_name": "New Zealand Dollar",
+   "plural": "New Zealand Dollars",
+   "value": "NZD",
+   "icon": "nz"
+ },
+ {
+   "label": "Nicaragua - Nicaraguan Cordoba (NIO)",
+   "currency_name": "Nicaraguan Cordoba",
+   "plural": "Nicaraguan Cordoba",
+   "value": "NIO",
+   "icon": "ni"
+ },
+ {
+   "label": "Nigeria - Nigerian Naira (NGN)",
+   "currency_name": "Nigerian Naira",
+   "plural": "Nigerian Naira",
+   "value": "NGN",
+   "icon": "ng"
+ },
+ {
+   "label": "North Korea - North Korean Won (KPW)",
+   "currency_name": "North Korean Won",
+   "plural": "North Korean Won",
+   "value": "KPW",
+   "icon": "kp"
+ },
+ {
+   "label": "Norway - Norwegian Krone (NOK)",
+   "currency_name": "Norwegian Krone",
+   "plural": "Norwegian Kroner",
+   "value": "NOK",
+   "icon": "no"
+ },
+ {
+   "label": "Oman - Omani Rial (OMR)",
+   "currency_name": "Omani Rial",
+   "plural": "Omani Rials",
+   "value": "OMR",
+   "icon": "om"
+ },
+ {
+   "label": "Pakistan - Pakistani Rupee (PKR)",
+   "currency_name": "Pakistani Rupee",
+   "plural": "Pakistani Rupees",
+   "value": "PKR",
+   "icon": "pk"
+ },
+ {
+   "label": "Papua New Guinea - Papua New Guinean Kina (PGK)",
+   "currency_name": "Papua New Guinean Kina",
+   "plural": "Papua New Guinean Kina",
+   "value": "PGK",
+   "icon": "pg"
+ },
+ {
+   "label": "Paraguay - Paraguayan Guarani (PYG)",
+   "currency_name": "Paraguayan Guarani",
+   "plural": "Paraguayan Guarani",
+   "value": "PYG",
+   "icon": "py"
+ },
+ {
+   "label": "Peru - Peruvian Sol (PEN)",
+   "currency_name": "Peruvian Sol",
+   "plural": "Peruvian Soles",
+   "value": "PEN",
+   "icon": "pe"
+ },
+ {
+   "label": "Philippines - Philippine Peso (PHP)",
+   "currency_name": "Philippine Peso",
+   "plural": "Philippine Pesos",
+   "value": "PHP",
+   "icon": "ph"
+ },
+ {
+   "label": "Poland - Polish Zloty (PLN)",
+   "currency_name": "Polish Zloty",
+   "plural": "Polish Zloty",
+   "value": "PLN",
+   "icon": "pl"
+ },
+ {
+   "label": "United Kingdon - British Pound (GBP)",
+   "currency_name": "British Pound",
+   "plural": "British Pounds",
+   "value": "GBP",
+   "icon": "gb"
+ },
+ {
+   "label": "Qatar - Qatari Riyal (QAR)",
+   "currency_name": "Qatari Riyal",
+   "plural": "Qatari Riyals",
+   "value": "QAR",
+   "icon": "qa"
+ },
+ {
+   "label": "Romania - Romanian Leu (RON)",
+   "currency_name": "Romanian Leu",
+   "plural": "Romanian Lei",
+   "value": "RON",
+   "icon": "ro"
+ },
+ {
+   "label": "Russia - Russian Ruble (RUB)",
+   "currency_name": "Russian Ruble",
+   "plural": "Russian Rubles",
+   "value": "RUB",
+   "icon": "ru"
+ },
+ {
+   "label": "Rwanda - Rwandan Franc (RWF)",
+   "currency_name": "Rwandan Franc",
+   "plural": "Rwandan Francs",
+   "value": "RWF",
+   "icon": "rw"
+ },
+ {
+   "label": "Saint Helena - Saint Helena Pound (SHP)",
+   "currency_name": "Saint Helena Pound",
+   "plural": "Saint Helena Pounds",
+   "value": "SHP",
+   "icon": "sh"
+ },
+ {
+   "label": "Samoa - Samoan Tala (WST)",
+   "currency_name": "Samoan Tala",
+   "plural": "Samoan Tala",
+   "value": "WST",
+   "icon": "ws"
+ },
+ {
+   "label": "Sao Tome and Principe - Sao Tome and Principe Dobra (STD)",
+   "currency_name": "Sao Tome and Principe Dobra",
+   "plural": "Sao Tome and Principe Dobra",
+   "value": "STD",
+   "icon": "st"
+ },
+ {
+   "label": "Saudi Arabia - Saudi Arabian Riyal (SAR)",
+   "currency_name": "Saudi Arabian Riyal",
+   "plural": "Saudi Arabian Riyals",
+   "value": "SAR",
+   "icon": "sa"
+ },
+ {
+   "label": "SDR (Special Drawing Right) (XDR)",
+   "currency_name": "SDR (Special Drawing Right)",
+   "plural": "SDR (Special Drawing Right)",
+   "value": "XDR",
+   "icon": ""
+ },
+ {
+   "label": "Serbia - Serbian Dinar (RSD)",
+   "currency_name": "Serbian Dinar",
+   "plural": "Serbian Dinars",
+   "value": "RSD",
+   "icon": "rs"
+ },
+ {
+   "label": "Seychelles - Seychellois Rupee (SCR)",
+   "currency_name": "Seychellois Rupee",
+   "plural": "Seychellois Rupees",
+   "value": "SCR",
+   "icon": "sc"
+ },
+ {
+   "label": "Sierra Leone - Sierra Leonean Leone (SLL)",
+   "currency_name": "Sierra Leonean Leone",
+   "plural": "Sierra Leonean Leone",
+   "value": "SLL",
+   "icon": "sl"
+ },
+ {
+   "label": "Singapore - Singapore Dollar (SGD)",
+   "currency_name": "Singapore Dollar",
+   "plural": "Singapore Dollars",
+   "value": "SGD",
+   "icon": "sg"
+ },
+ {
+   "label": "Solomon Islands - Solomon Islands Dollar (SBD)",
+   "currency_name": "Solomon Islands Dollar",
+   "plural": "Solomon Islands Dollars",
+   "value": "SBD",
+   "icon": "sb"
+ },
+ {
+   "label": "Somalia - Somali Shilling (SOS)",
+   "currency_name": "Somali Shilling",
+   "plural": "Somali Shillings",
+   "value": "SOS",
+   "icon": "so"
+ },
+ {
+   "label": "South Africa - South African Rand (ZAR)",
+   "currency_name": "South African Rand",
+   "plural": "South African Rand",
+   "value": "ZAR",
+   "icon": "za"
+ },
+ {
+   "label": "South Korea - South Korean Won (KRW)",
+   "currency_name": "South Korean Won",
+   "plural": "South Korean Won",
+   "value": "KRW",
+   "icon": "kr"
+ },
+ {
+   "label": "South Sudan - South Sudanese Pound (SSP)",
+   "currency_name": "South Sudanese Pound",
+   "plural": "South Sudanese Pounds",
+   "value": "SSP",
+   "icon": "ss"
+ },
+ {
+   "label": "Sri Lanka - Sri Lankan Rupee (LKR)",
+   "currency_name": "Sri Lankan Rupee",
+   "plural": "Sri Lankan Rupees",
+   "value": "LKR",
+   "icon": "lk"
+ },
+ {
+   "label": "Sudan - Sudanese Pound (SDG)",
+   "currency_name": "Sudanese Pound",
+   "plural": "Sudanese Pounds",
+   "value": "SDG",
+   "icon": "sd"
+ },
+ {
+   "label": "Suriname - Surinamese Dollar (SRD)",
+   "currency_name": "Surinamese Dollar",
+   "plural": "Surinamese Dollars",
+   "value": "SRD",
+   "icon": "sr"
+ },
+ {
+   "label": "Swaziland - Swazi Lilangeni (SZL)",
+   "currency_name": "Swazi Lilangeni",
+   "plural": "Swazi Emalangeni",
+   "value": "SZL",
+   "icon": "sz"
+ },
+ {
+   "label": "Sweden - Swedish Krona (SEK)",
+   "currency_name": "Swedish Krona",
+   "plural": "Swedish Kronor",
+   "value": "SEK",
+   "icon": "se"
+ },
+ {
+   "label": "Switzerland - Swiss Franc (CHF)",
+   "currency_name": "Swiss Franc",
+   "plural": "Swiss Francs",
+   "value": "CHF",
+   "icon": "ch"
+ },
+ {
+   "label": "Syria - Syrian Pound (SYP)",
+   "currency_name": "Syrian Pound",
+   "plural": "Syrian Pounds",
+   "value": "SYP",
+   "icon": ""
+ },
+ {
+   "label": "Tajikistan - Tajikistani Somoni (TJS)",
+   "currency_name": "Tajikistani Somoni",
+   "plural": "Tajikistani Somoni",
+   "value": "TJS",
+   "icon": "tj"
+ },
+ {
+   "label": "Tanzania - Tanzanian Shilling (TZS)",
+   "currency_name": "Tanzanian Shilling",
+   "plural": "Tanzanian Shillings",
+   "value": "TZS",
+   "icon": "tz"
+ },
+ {
+   "label": "Thailand - Thai Baht (THB)",
+   "currency_name": "Thai Baht",
+   "plural": "Thai Baht",
+   "value": "THB",
+   "icon": "th"
+ },
+ {
+   "label": "Tonga - Tongan Pa’anga (TOP)",
+   "currency_name": "Tongan Pa’anga",
+   "plural": "Tongan Pa’anga",
+   "value": "TOP",
+   "icon": "to"
+ },
+ {
+   "label": "Trinidad and Tobago - Trinidad and Tobago Dollar (TTD)",
+   "currency_name": "Trinidad and Tobago Dollar",
+   "plural": "Trinidad and Tobago Dollars",
+   "value": "TTD",
+   "icon": "tt"
+ },
+ {
+   "label": "Tunisia - Tunisian Dinar (TND)",
+   "currency_name": "Tunisian Dinar",
+   "plural": "Tunisian Dinars",
+   "value": "TND",
+   "icon": "tn"
+ },
+ {
+   "label": "Turkey - Turkish Lira (TRY)",
+   "currency_name": "Turkish Lira",
+   "plural": "Turkish Lira",
+   "value": "TRY",
+   "icon": "tr"
+ },
+ {
+   "label": "Turkmenistan - Turkmen Manat (TMT)",
+   "currency_name": "Turkmen Manat",
+   "plural": "Turkmen Manat",
+   "value": "TMT",
+   "icon": "tm"
+ },
+ {
+   "label": "UAE - UAE Dirham (AED)",
+   "currency_name": "UAE Dirham",
+   "plural": "UAE Dirhams",
+   "value": "AED",
+   "icon": "ae"
+ },
+ {
+   "label": "Uganda - Ugandan Shilling (UGX)",
+   "currency_name": "Ugandan Shilling",
+   "plural": "Ugandan Shillings",
+   "value": "UGX",
+   "icon": "ug"
+ },
+ {
+   "label": "Ukraine - Ukrainian Hryvnia (UAH)",
+   "currency_name": "Ukrainian Hryvnia",
+   "plural": "Ukrainian Hryvnia",
+   "value": "UAH",
+   "icon": "ua"
+ },
+ {
+   "label": "United States - United States Dollar (USD)",
+   "currency_name": "United States Dollar",
+   "plural": "United States Dollars",
+   "value": "USD",
+   "icon": "us"
+ },
+ {
+   "label": "Uruguay - Uruguayan Peso (UYU)",
+   "currency_name": "Uruguayan Peso",
+   "plural": "Uruguayan Pesos",
+   "value": "UYU",
+   "icon": "uy"
+ },
+ {
+   "label": "Uzbekistan - Uzbekistani Som (UZS)",
+   "currency_name": "Uzbekistani Som",
+   "plural": "Uzbekistani Som",
+   "value": "UZS",
+   "icon": "uz"
+ },
+ {
+   "label": "Vanuatu - Vanuatu Vatu (VUV)",
+   "currency_name": "Vanuatu Vatu",
+   "plural": "Vanuatu Vatu",
+   "value": "VUV",
+   "icon": "vu"
+ },
+ {
+   "label": "Venezuala - Venezuelan Bolivar (VEF)",
+   "currency_name": "Venezuelan Bolivar",
+   "plural": "Venezuelan Bolivar",
+   "value": "VEF",
+   "icon": "ve"
+ },
+ {
+   "label": "Vietnam - Vietnamese Dong (VND)",
+   "currency_name": "Vietnamese dong",
+   "plural": "Vietnamese dongs",
+   "value": "VND",
+   "icon": "vn"
+ },
+ {
+   "label": "West Africa - West African CFA Franc (XOF)",
+   "currency_name": "West African CFA franc",
+   "plural": "West African CFA francs",
+   "value": "XOF",
+   "icon": "sn"
+ },
+ {
+   "label": "Yemen - Yemeni Rial (YER)",
+   "currency_name": "Yemeni Rial",
+   "plural": "Yemeni Rials",
+   "value": "YER",
+   "icon": "ye"
+ },
+ {
+   "label": "Zambia - Zambian kwacha (ZMW)",
+   "currency_name": "Zambian Kwacha",
+   "plural": "Zambian Kwacha",
+   "value": "ZMW",
+   "icon": "zm"
+ }
+]

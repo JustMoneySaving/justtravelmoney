@@ -253,106 +253,27 @@ function assets() {
 
 }
 
-function jtm_get_currency_array() {
-	return array(
-		array(
-			'label' => 'Euro - (EUR)',
-			'plural' => 'Euros',
-			'value' => 'EUR',
-			'icon' => 'eu',
-		),
-		array(
-			'label' => 'USA - U.S. Dollar (USD)',
-			'plural' => 'Dollars',
-			'value' => 'USD',
-			'icon' => 'us',
-		),
+function jtm_get_currency_array( $refresh = false ) {
+	$currencies_dropdown = get_transient( 'jtm_currencies_dropdown' );
+	if ( ! $currencies_dropdown || $refresh ) {
+		$json = file_get_contents( get_template_directory() . '/json/currencies.json' );
+		if ( $json ) {
+			$currencies_dropdown = json_decode( $json );
+			$feeds = new \jtm\Currencies();
+			if ( $feeds ) {
+				foreach ( $currencies_dropdown as $key => $currency ) {
+					if ( ! isset( $feeds->currencies[ $currency->value ] ) ) {
+						unset( $currencies_dropdown[ $key ] );
+					}
+				}
+			}
+			// Reindex array
+			$currencies_dropdown = array_values( $currencies_dropdown );
+			set_transient( 'jtm_currencies_dropdown', $currencies_dropdown, HOUR_IN_SECONDS/2 );
+		}
+	}
 
-		array(
-			'label' => 'Australia - Australian Dollar (AUD)',
-			'plural' => 'Australian Dollars',
-			'value' => 'AUD',
-			'icon' => 'au',
-		),
-
-		array(
-			'label' => 'Austria - Euro (EUR)',
-			'plural' => 'Euros',
-			'value' => 'EUR',
-			'icon' => 'at',
-		),
-
-		array(
-			'label' => 'Canada - Canadian Dollar (CAD)',
-			'plural' => 'Canadian Dollars',
-			'value' => 'CAD',
-			'icon' => 'ca',
-		),
-
-		array(
-			'label' => 'Bosnia and Herzegovina - Konvertibilna Marka (BAM)',
-			'plural' => 'Konvertibilna Markas',
-			'value' => 'BAM',
-			'icon' => 'ba',
-		),
-
-		array(
-			'label' => 'China - Chinese Renminbi (CNY)',
-			'plural' => 'Chinese Renminbi',
-			'value' => 'CNY',
-			'icon' => 'cn',
-		),
-
-		array(
-			'label' => 'Denmark - Danish Krone (DKK)',
-			'plural' => 'Danish Kroner',
-			'value' => 'DKK',
-			'icon' => 'dk',
-		),
-
-		array(
-			'label' => 'Egypt - Egyptian Pound (EGP)',
-			'plural' => 'Egyptian Pounds',
-			'value' => 'EGP',
-			'icon' => 'eg',
-		),
-
-		array(
-			'label' => 'France - Euro (EUR)',
-			'plural' => 'Euros',
-			'value' => 'EUR',
-			'icon' => 'fr',
-		),
-
-		array(
-			'label' => 'Mexico - Mexican Peso (MXN)',
-			'plural' => 'Mexican Pesos',
-			'value' => 'MXN',
-			'icon' => 'mx',
-		),
-
-		array(
-			'label' => 'Sweden - Swedish Krona (SEK)',
-			'plural' => 'Swedish Kronor',
-			'value' => 'SEK',
-			'icon' => 'se',
-		),
-
-		array(
-			'label' => 'Switzerland - Swiss Franc (CHF)',
-			'plural' => 'Swiss Francs',
-			'value' => 'CHF',
-			'icon' => 'ch',
-		),
-
-		array(
-			'label' => 'United Kingdom - British Pound (GBP)',
-			'plural' => 'British Pounds',
-			'value' => 'GBP',
-			'icon' => 'gb',
-		),
-
-	);
+	return $currencies_dropdown;
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100 );
@@ -383,8 +304,8 @@ add_action( 'init', __NAMESPACE__ . '\\wdc_disable_wp_emojicons' );
 
  /* Theme Mods */
 
-add_action( 'send_headers',  __NAMESPACE__ . '\\WDC_add_last_modified_header' );
-function WDC_add_last_modified_header() {
+add_action( 'send_headers',  __NAMESPACE__ . '\\wdc_add_last_modified_header' );
+function wdc_add_last_modified_header() {
 	//Check if we are in a single post of any type (archive pages has not modified date)
 	if ( is_singular() || is_page() ) {
 		$post_id = get_the_id();

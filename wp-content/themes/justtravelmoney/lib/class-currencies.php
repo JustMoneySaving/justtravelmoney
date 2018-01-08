@@ -18,7 +18,6 @@ if ( ! class_exists( __NAMESPACE__ . '/Currencies' ) ) {
 			if ( null === $feed_urls ) {
 				return false;
 			}
-
 			$currencies = get_transient( 'jtml_currency_rates' );
 			if ( ! $currencies || $refresh_cache ) {
 				$currencies = array();
