@@ -12,8 +12,6 @@ if ( ! class_exists( __NAMESPACE__ . '/Currencies' ) ) {
 
 		public function __construct( $refresh = false ) {
 			$this->currencies = $this->get_feeds( $this->get_urls( $refresh ), $refresh );
-
-			var_dump( $this->provider( 342 ) ); die;
 		}
 
 		private function get_feeds( $feed_urls = null, $refresh_cache = false ) {
@@ -139,20 +137,26 @@ if ( ! class_exists( __NAMESPACE__ . '/Currencies' ) ) {
 			return $results;
 		}
 
-		public function provider( $provider = null ) {
+		public function provider( $provider = null, $refresh = false ) {
 			if ( null === $provider || ! is_integer( $provider ) ) {
 				return false;
 			}
 
-			$provider_rates = array();
+			$provider_rates = get_transient( 'jtml_provider_rate_' . $provider );
 
-			foreach ( $this->currencies as $currency=>$providers ) {
-				if ( isset( $providers[ $provider ] ) ) {
-					$provider_rates[ $currency ] = $providers[ $provider ]['rate'];
+			if ( ! $provider_rates || $refresh ) {
+				$provider_rates = array();
+
+				foreach ( $this->currencies as $currency => $providers ) {
+					if ( isset( $providers[ $provider ] ) ) {
+						$provider_rates[ $currency ] = $providers[ $provider ]['rate'];
+					}
 				}
+
+				set_transient( 'jtml_provider_rate_' . $provider, $provider_rates, HOUR_IN_SECONDS / 2 );
 			}
 
-			var_dump( $provider_rates ); die;
+			return $provider_rates;
 		}
 	}
 }
