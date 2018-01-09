@@ -16,7 +16,7 @@ if ( is_page_template( 'template-homepage.php' ) || wp_doing_ajax() ) {
 		$exchange_results = $feeds->exchange( $currency, $value );
 		$currency_array = \Roots\Sage\Setup\jtm_get_currency_array();
 		$currency_record = array_search( $currency, array_column( $currency_array, 'value' ), true );
-		$currency_name = $currency_array[ $currency_record ]['plural'];
+		$currency_name = $currency_array[ $currency_record ]->plural;
 	}
 };
 if ( is_singular( 'currency-guides' ) ) {
@@ -26,7 +26,7 @@ if ( is_singular( 'currency-guides' ) ) {
 	$other_title = 'Other ' . $currenct_name . ' Exchange Rates';
 
 	$feeds = new \jtm\Currencies();
-	$currency = rwmb_meta( 'WDC_currency_symbol' );
+	$currency = strtoupper( rwmb_meta( 'WDC_currency_symbol' ) );
 	$value = 500;
 	if ( ! $currency ) {
 		$exchange_results = null;
@@ -34,7 +34,7 @@ if ( is_singular( 'currency-guides' ) ) {
 		$exchange_results = $feeds->exchange( $currency, $value );
 		$currency_array = \Roots\Sage\Setup\jtm_get_currency_array();
 		$currency_record = array_search( $currency, array_column( $currency_array, 'value' ), true );
-		$currency_name = $currency_array[ $currency_record ]['plural'];
+		$currency_name = $currency_array[ $currency_record ]->plural;
 	}
 }
 
