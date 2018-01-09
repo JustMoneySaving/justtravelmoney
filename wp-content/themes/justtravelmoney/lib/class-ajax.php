@@ -11,6 +11,7 @@ if ( ! class_exists( __NAMESPACE__ . '/Ajax' ) ) {
 		private function add_actions() {
 			add_action( 'wp_ajax_update_currencies', array( $this, 'update_currencies' ) );
 			add_action( 'wp_ajax_exchange', array( $this, 'exchange' ) );
+			add_action( 'wp_ajax_nopriv_exchange', array( $this, 'exchange' ) );
 		}
 
 		public function update_currencies() {
