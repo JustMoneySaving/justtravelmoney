@@ -43,10 +43,11 @@
                 $('form.comparison-form').submit(function(e) {
                     e.preventDefault();
 
-
                     var conversion_popup = $('#conversion-popup'),
                         homepage_results = $('#homepage-results'),
-                        ww = $(window).width();
+                        ww = $(window).width(),
+                        currency = $(this).find('.ui-autocomplete-input').val(),
+                        value = $(this).find('#currency-amount').val();
 
                     conversion_popup.fadeIn(200, function() {
                         var progressBar = new ldBar("#progressBar");
@@ -54,8 +55,8 @@
                         setTimeout(function() {
                             var data = {
                                 'action'  : 'exchange',
-                                'currency': $('#currency-select').val(),
-                                'value'   : $('#currency-amount').val()
+                                'currency': currency,
+                                'value'   : value
                             };
                             jQuery.post(wdc.ajax_url, data, function(response) {
                                 homepage_results.replaceWith(response);
