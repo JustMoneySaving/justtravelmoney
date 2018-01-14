@@ -42,6 +42,7 @@ if(is_post_type_archive('currency-guides')){
 
 if(is_singular('providers')){
     $hero_title = get_the_title();
+    $alt = get_the_title();
     $hero_image = wp_get_attachment_image_src( get_post_thumbnail_id($pid), 'full' );
     $hero_title_meta = rwmb_meta( 'WDC_provider_hero_title', array(), $pid );
 
@@ -56,6 +57,8 @@ if(is_singular('providers')){
     if(!empty($provider_logo)):
         foreach($provider_logo as $logo){
             $logo_src = $logo['full_url'];
+            $img_alt = $logo['alt']; if( $img_alt != ''){ $alt = $img_alt; }
+
         }
     endif;
 }
@@ -76,7 +79,7 @@ if(is_singular('currency-guides')){
             <?php if(is_singular('providers')){ ?>
                 <div class="provider-logo">
                     <div class="logo-inner">
-                        <img src="<?php echo $logo_src;?>" alt="<?php get_the_title();?>" />
+                        <img src="<?php echo $logo_src;?>" alt="<?php echo $alt;?>" />
                     </div>
                 </div>
             <?php } ?>
