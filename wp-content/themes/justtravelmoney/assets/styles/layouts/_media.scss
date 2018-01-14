@@ -1018,4 +1018,60 @@
     .archive-nav {
         margin-bottom: 40px;
     }
+    .compare-rates {
+        table {
+            tr {
+                th {
+                    width: auto;
+                    padding: 5px;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    &.currency {
+                        width: 20%;
+                        padding-left: 0;
+                    }
+                    &.exchange-rate {
+                        width: auto;
+                    }
+                    &.you-get {
+                        width: auto;
+                    }
+                    &.action {
+                        width: 30%;
+                    }
+                }
+                td {
+                    div {
+                        font-size: 12px;
+                    }
+                    &.currency {
+                        div {
+                            padding-left: 8px;
+                            .name {
+                                display: none;
+                            }
+                            .iso {
+                                display: block;
+                            }
+                        }
+                    }
+                    &.you-get {
+                        div {
+                            .iso {
+                                display: none;
+                            }
+                        }
+                    }
+                    &.action {
+                        .btn {
+                            padding: 0 10px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

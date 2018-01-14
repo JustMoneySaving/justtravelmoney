@@ -54,9 +54,9 @@
                         progressBar.set(100);
                         setTimeout(function() {
                             var data = {
-                                'action'  : 'exchange',
+                                'action': 'exchange',
                                 'currency': currency,
-                                'value'   : value
+                                'value': value
                             };
                             jQuery.post(wdc.ajax_url, data, function(response) {
                                 homepage_results.replaceWith(response);
@@ -79,7 +79,7 @@
                     });
                 });
 
-                if ( $('#homepage-results').hasClass('results-loaded') ) {
+                if ($('#homepage-results').hasClass('results-loaded')) {
                     $('#homepage-results').show();
                     var ww = $(window).width();
                     if (ww >= 768) {
@@ -121,6 +121,14 @@
                     };
                 $("#currency-select-mobile").focus(function() {
                     $(this).autocomplete('search', $(this).val());
+                });
+
+                // Show all table results
+
+                $('#show-all-exchange-results').click(function(e) {
+                    e.preventDefault();
+                    $('#currency-comparison-list tr').removeClass('noshow');
+                    $(this).parent().fadeOut();
                 });
             }
         },

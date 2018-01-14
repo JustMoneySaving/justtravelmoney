@@ -1723,6 +1723,9 @@ div.wpcf7 {
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                        .iso {
+                            display: none;
+                        }
                     }
                 }
                 &.exchange-rate {

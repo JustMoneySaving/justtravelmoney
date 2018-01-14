@@ -276,6 +276,22 @@ function jtm_get_currency_array( $refresh = false ) {
 	return $currencies_dropdown;
 }
 
+function jtm_get_currency_name($short_name){
+	
+	$currencies = jtm_get_currency_array();
+	$currency_name = '';
+	if(!empty($currencies)){
+		foreach($currencies as $currency){
+			$currency_value = $currency->value;
+			if($currency_value == $short_name){
+				$currency_name = $currency->plural;
+			}
+		}
+	}
+
+	return $currency_name;
+}
+
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100 );
 
 function admin_assets() {
