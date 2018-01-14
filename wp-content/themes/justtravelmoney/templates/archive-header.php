@@ -12,5 +12,5 @@ if(is_archive()){
 ?>
 
 <div class="page-header archive-title container-fluid">
-  <h1><?= $title_prepend .Titles\title(); ?></h1>
+  <h2><?= $title_prepend .Titles\title(); ?></h2>
 </div>

@@ -895,7 +895,8 @@
         padding-bottom: 50px;
         .page-header {
             margin-bottom: 5px;
-            h1 {
+            h1,
+            h2 {
                 font-size: 22px;
                 font-weight: 700;
                 line-height: 30px;
@@ -1637,5 +1638,120 @@ div.wpcf7 {
     .btn {
         padding: 0 50px;
         line-height: 46px;
+    }
+}
+
+.compare-rates {
+    background: $white;
+    border: 1px solid $light-grey;
+    border-left: 5px solid #45c62f;
+    border-radius: 3px;
+    padding: 20px 15px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    header {
+        color: $green;
+        margin-bottom: 15px;
+        h3 {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 24px;
+            margin: 0;
+            float: left;
+        }
+        span {
+            float: right;
+            line-height: 24px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+    table {
+        width: 100%;
+        border: none;
+        table-layout: fixed;
+        border-collapse: collapse;
+        margin-bottom: 0;
+        tr {
+            th {
+                text-align: center;
+                font-size: 14px;
+                padding: 8px 0;
+                border: none;
+                &.currency {
+                    text-align: left;
+                    padding-left: 26px;
+                    width: 28%;
+                }
+                &.exchange-rate {
+                    width: 17%;
+                }
+                &.you-get {
+                    width: 20%;
+                }
+                &.action {
+                    width: 35%;
+                }
+            }
+            td {
+                background: $light-grey;
+                padding: 0;
+                padding: 8px 0;
+                border: none;
+                border-bottom: 2px solid $white;
+                div {
+                    font-size: 13px;
+                    line-height: 1em;
+                    font-weight: 600;
+                    background: $white;
+                    padding: 11px 0;
+                    line-height: 1em;
+                    border-top: 1px solid $light-grey;
+                    border-bottom: 1px solid $light-grey;
+                }
+                &.currency {
+                    text-align: left;
+                    padding-left: 8px;
+                    div {
+                        padding-left: 18px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                &.exchange-rate {
+                    text-align: center;
+                }
+                &.you-get {
+                    text-align: center;
+                }
+                &.action {
+                    text-align: center;
+                    .btn {
+                        height: 35px;
+                        padding: 0 30px;
+                        line-height: 34px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            &.noshow {
+                display: none;
+            }
+        }
+    }
+    .show-all-results {
+        text-align: center;
+        margin-top: 25px;
+        a {
+            font-weight: 900;
+            color: #000;
+            font-size: 12px;
+        }
     }
 }
