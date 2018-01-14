@@ -1,6 +1,6 @@
 <article <?php post_class(); ?>>
     <header>
-        <h1 class="entry-title"><?php _e('How To Contact Us', 'sage');?></h1>
+        <h2 class="entry-title"><?php _e('How To Contact Us', 'sage');?></h2>
     </header>
     <div class="entry-content">
         <?php the_content(); ?>
