@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
+      <h2 class="entry-title"><?php the_title(); ?></h2>
     </header>
     <div class="entry-content">
       <?php if(has_post_thumbnail()){ ?>

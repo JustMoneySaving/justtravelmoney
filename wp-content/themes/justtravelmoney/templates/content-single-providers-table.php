@@ -20,7 +20,8 @@ if($exchange_results): ?>
 <div class="compare-rates">
 
     <header>
-        <h3>Latest <?php echo $hero_title;?> Rates</h3>
+    
+        <h3><?php echo sprintf( __('Latest %s Rates', 'sage'), $hero_title); ?></h3>
         <span class="update_time">(59:43 Until Next Update)</span>
     </header>
 
