@@ -19,7 +19,7 @@
 					<div class="result-info">
 							<div class="amount">
 								<div class="vm">
-									You Get <span><?php echo esc_attr( $line_data['you_get'] ); ?> <?php echo esc_attr( $currency ); ?></span>
+									You Get <span><?php echo esc_attr( number_format( $line_data['you_get'], 2 ) ); ?> <?php echo esc_attr( $currency ); ?></span>
 								</div>
 							</div>
 							<div class="rate">

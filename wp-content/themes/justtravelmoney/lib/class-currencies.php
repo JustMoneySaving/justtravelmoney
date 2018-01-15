@@ -32,7 +32,7 @@ if ( ! class_exists( __NAMESPACE__ . '/Currencies' ) ) {
 						foreach ( $rates as $rate ) {
 							$code = $rate->Currency[0]->text; // @codingStandardsIgnoreLine
 							$currencies[ $code ][ $post_id ] = array(
-								'rate' => $rate->{'Standard Sell Rate'}[0]->text,
+								'rate' => str_replace( ',', '', $rate->{'Standard Sell Rate'}[0]->text ),
 							);
 						}
 					} else {
