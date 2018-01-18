@@ -8,11 +8,14 @@
  * https://pantheon.io/docs
  */
 
-if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+if ( isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     /** Replace www.example.com with your registered domain name */
     $primary_domain = 'www.justtravelmoney.co.uk';
+
+    // Disable WP Cron
+    define('DISABLE_WP_CRON', true);
   }
   else {
     // Redirect to HTTPS on every Pantheon environment.
@@ -178,12 +181,9 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 
 /* That's all, stop editing! Happy Pressing. */
 
-
-
-
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
-require_once(ABSPATH . 'wp-settings.php');
+require_once(ABSPATH . 'wp-settings.php' );

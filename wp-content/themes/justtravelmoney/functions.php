@@ -28,6 +28,7 @@ $sage_includes = [
 	'lib/import-meta.php',      // Import Metabox
 	'lib/class-currencies.php', // Import class
 	'lib/class-ajax.php',       // AJAX class
+	'lib/class-cron.php',       // Cron class
 ];
 
 foreach ( $sage_includes as $file ) {
