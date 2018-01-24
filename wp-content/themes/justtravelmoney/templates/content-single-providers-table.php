@@ -3,6 +3,7 @@ $currencies = new \jtm\Currencies();
 $exchange_results = $currencies->provider( get_the_id(), true );
 $hero_title = get_the_title();
 $hero_title_meta = rwmb_meta( 'WDC_provider_hero_title', array(), get_the_id() );
+$currency_table_header = rwmb_meta( 'WDC_currency_table_header', array(), get_the_id() );
 //Meta
 $website_url = rwmb_meta( 'WDC_about_provider_url', array(), get_the_id() );
 $affiliate_url = rwmb_meta( 'WDC_about_provider_affiliate_url', array(), get_the_id() );
@@ -15,14 +16,18 @@ if ( $affiliate_url ) {
 if ( $hero_title_meta ) {
 	$hero_title = $hero_title_meta;
 }
+
+if ( ! $currency_table_header ) {
+	$currency_table_header = sprintf( __( 'Latest %s Rates', 'sage'), $hero_title);
+}
 if($exchange_results): ?>
 
 <div class="compare-rates">
 
 	<header>
 	
-		<h3><?php echo sprintf( __('Latest %s Rates', 'sage'), $hero_title); ?></h3>
-		<span class="update_time">(59:43 Until Next Update)</span>
+		<h3><?php echo $currency_table_header; ?></h3>
+		<span class="update_time hourly-timer">(59:43 Until Next Update)</span>
 	</header>
 
 	<table id="currency-comparison-list" class="table">
@@ -47,7 +52,7 @@ if($exchange_results): ?>
 			$currency_name = $name;
 			$exchange_int = floatval($exchange);
 			$hundred_pounds_buys = 100 * $exchange_int;
-			$currency_plural = \Roots\Sage\Setup\jtm_get_currency_name($currency_name);
+			$currency_plural = \Roots\Sage\Setup\jtm_get_currency_name( $currency_name);
 			$row_class = 'tr';
 			if($i > 6){
 				$row_class = 'tr noshow';
@@ -64,7 +69,7 @@ if($exchange_results): ?>
 		<?php } ?>
 	</table>
 	<div class="show-all-results">
-		<a href="#" id="show-all-exchange-results"><?php esc_html_e('View All Rates', 'sage');?></a>
+		<a href="#" id="show-all-exchange-results"><?php esc_html_e('View All Rates', 'sage' );?></a>
 	</div>
 </div>
 <?php

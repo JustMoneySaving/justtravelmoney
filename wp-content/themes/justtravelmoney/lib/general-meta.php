@@ -233,6 +233,20 @@ $meta_boxes[] = array(
 	),
 );
 
+// Currency table
+$meta_boxes[] = array(
+	'title' => 'Currency Table',
+	'pages' => array( 'providers' ),
+	'fields' => array(
+		array(
+			'name' => __( 'Currency Table Header', 'jtm' ),
+			'id'   => "{$prefix}currency_table_header",
+			'desc'  => 'Sits above the currency table',
+			'type' => 'text'
+		),
+	),
+);
+
 // OFFERS
 $meta_boxes[] = array(
 	'title' => 'Offer Details',
