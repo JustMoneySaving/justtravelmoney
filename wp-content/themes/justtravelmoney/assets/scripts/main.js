@@ -130,6 +130,8 @@
                     $('#currency-comparison-list tr').removeClass('noshow');
                     $(this).parent().fadeOut();
                 });
+
+                $('.hourly-timer').hourlyCountdown();
             }
         },
         // Home page
@@ -192,6 +194,29 @@
                 JTM.rates = response;
             });
         }
+    };
+
+    $.fn.hourlyCountdown = function(element) {
+        var $target = this;
+        (function tick() {
+            var currentTime = new Date(),
+                minutesToGo,
+                secondsToGo,
+                helpers;
+
+            helpers = {
+                padding: function(number,size) {
+                    var s = "000000000" + number;
+                    return s.substr(s.length-size);
+                }
+            };
+
+            secondsToGo = helpers.padding(59 - currentTime.getSeconds(), 2);
+            minutesToGo = helpers.padding(59 - currentTime.getMinutes(), 2);
+
+            $target.html("(" + minutesToGo + ":" + secondsToGo + " Until Next Update)");
+            setTimeout(tick, 1000);
+        })();
     };
 
     // Load Events
