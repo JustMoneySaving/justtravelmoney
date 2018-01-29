@@ -19,7 +19,7 @@ $provider_fact_box = rwmb_meta( 'WDC_provider_fact_box');
 
 <?php if($provider_fact_box):?>
 <section class="widget merchant-widget provider-facts">
-    <h3>Fact Box</h3>
+    <h3>Facts About <?php echo get_the_title();?></h3>
     <?php echo apply_filters('the_content', $provider_fact_box);?>
 </section>
 <?php endif;?>
