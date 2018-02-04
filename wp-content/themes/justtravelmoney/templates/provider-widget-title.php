@@ -10,5 +10,5 @@ else{
 ?>
 
 <div class="page-header provider-widget-title container-fluid">
-  <h2><?= __('Check If', 'sage'). ' '.$title. ' ' .__('Has The Best Rate', 'sage') ?></h2>
+  <h2><?= __('Check If', 'sage'). ' '.$title. ' ' .__('Is The Best Rate', 'sage') ?></h2>
 </div>
